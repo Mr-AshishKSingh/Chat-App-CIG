@@ -1,6 +1,7 @@
 using namespace std;
 class Distance {
 public:
+//jdhdjfndnlkdlk
     int feet, inch;
     
     Distance()
