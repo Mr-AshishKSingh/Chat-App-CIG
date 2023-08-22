@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'LABROX',
+      title: 'HEALTHIFY',
       theme: ThemeData.light(useMaterial3: true).copyWith(
           scaffoldBackgroundColor: Colors.white,
           appBarTheme: const AppBarTheme(backgroundColor: Colors.white)),
