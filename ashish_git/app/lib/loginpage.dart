@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'button.dart';
+
 
 
 
@@ -22,7 +24,13 @@ class LoginPageState extends State < LoginPage > {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
 
-           //logo
+
+
+
+           
+           
+
+           
 
           const  CircleAvatar(
             radius: 50,
@@ -31,6 +39,8 @@ class LoginPageState extends State < LoginPage > {
           ),
           
 
+          SizedBox(height: 10,),SizedBox(height: 10,),SizedBox(height: 10,),
+
           const  Text(
             ' WELCOME ', 
           style: TextStyle(
@@ -38,7 +48,7 @@ class LoginPageState extends State < LoginPage > {
             fontSize: 30,
           ),),
 
-          const   SizedBox(height: 10,),
+         
           Text(
             ' Please fill the below Details  ', 
           style: TextStyle(
@@ -46,7 +56,7 @@ class LoginPageState extends State < LoginPage > {
             fontSize: 20,
           ),),
 
-          SizedBox(height: 10,),
+          SizedBox(height: 15,),
 
 
 
@@ -71,27 +81,35 @@ class LoginPageState extends State < LoginPage > {
           ),
 
 
-          SizedBox(height: 10,),
+          SizedBox(height: 5,),
 
-          // sign in button 
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal : 40.0),
-            child: Container(
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color : Color.fromARGB(255, 115, 28, 229),
-                border  : Border.all(color : Color.fromARGB(255, 148, 12, 178)),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Center(child: Text('Log In' , 
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold ,
-                fontSize: 15,
-              ),)),
+          // // sign in button 
+          // Padding(
+          //   padding: const EdgeInsets.symmetric(horizontal : 40.0),
+          //   child: Container(
+          //     padding: EdgeInsets.all(10),
+          //     decoration: BoxDecoration(
+          //       color : Color.fromARGB(255, 115, 28, 229),
+          //       border  : Border.all(color : Color.fromARGB(255, 148, 12, 178)),
+          //       borderRadius: BorderRadius.circular(10),
+          //     ),
+          //     child: Center(child: Text('Log In' , 
+          //     style: TextStyle(
+          //       color: Colors.white,
+          //       fontWeight: FontWeight.bold ,
+          //       fontSize: 15,
+          //     ),)),
+          //   ),
+          // ),
+
+
+          Container(
+            child: ElevatedButton(
+              onPressed: () {},
+              style : buttonPrimary,
+              child: Text('LOGIN '),
             ),
           )
-
 
         ]),
       )
