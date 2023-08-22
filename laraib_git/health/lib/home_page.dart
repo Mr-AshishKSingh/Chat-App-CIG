@@ -36,7 +36,7 @@ class _MyWidgetState extends State<Home> {
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                          image: AssetImage('assets/images/images.jpg'))))
+                          image: AssetImage('assets/images/images.png'))))
             ],
           ),
           //chats
