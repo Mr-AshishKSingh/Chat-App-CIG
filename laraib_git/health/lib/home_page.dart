@@ -44,7 +44,7 @@ class _MyWidgetState extends State<Home> {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             margin:
                 const EdgeInsets.symmetric(horizontal: 40).copyWith(top: 30),
-            decoration: BoxDecoration(border: Border.all(color: Colors.blue)),
+            decoration: BoxDecoration(color: Colors.blue,borderRadius: BorderRadius.circular(11)),
             child: const Text(
               "The world of cure",
               style: TextStyle(
