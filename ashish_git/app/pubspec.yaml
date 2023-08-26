@@ -96,6 +96,9 @@ flutter:
   - assets/images/WELCOME.png
   - assets/images/doctor.png
   - assets/images/pfp2.png
+  - assets/images/doctor2.png
+  - assets/images/doctor3.png
+
 
 
 flutter_gif: any // or the latest version on Pub
