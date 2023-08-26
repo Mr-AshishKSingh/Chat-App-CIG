@@ -50,9 +50,9 @@ class Welcome2 extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 50),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(207, 223, 180, 0.74),
+                    color: Color.fromRGBO(223, 180, 221, 0.737),
                     border:
-                        Border.all(color: Color.fromARGB(255, 194, 245, 165)),
+                        Border.all(color: Color.fromARGB(255, 245, 165, 232)),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Padding(
@@ -91,7 +91,7 @@ class Welcome2 extends StatelessWidget {
 
               Container(
                 child: ElevatedButton(
-                  style: gobackbutton,
+                  style: gobackbutton_welcome2,
                   onPressed: () {
                     Navigator.pop(context);
                   },
