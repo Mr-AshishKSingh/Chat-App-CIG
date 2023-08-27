@@ -9,7 +9,7 @@ class Welcome2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         //background color
-        backgroundColor: Color.fromARGB(255, 231, 51, 180),
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -36,7 +36,7 @@ class Welcome2 extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Color.fromARGB(255, 254, 253, 253)),
+                      color: Color.fromARGB(255, 0, 0, 0)),
                 ),
               ),
 
@@ -50,9 +50,9 @@ class Welcome2 extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 50),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(223, 180, 221, 0.737),
+                    color: Color.fromRGBO(184, 178, 183, 0.729),
                     border:
-                        Border.all(color: Color.fromARGB(255, 245, 165, 232)),
+                        Border.all(color: Color.fromARGB(255, 255, 255, 255)),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Padding(

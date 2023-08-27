@@ -55,3 +55,15 @@ final ButtonStyle ClickHere = ElevatedButton.styleFrom(
   ),
 
 );
+
+
+
+final ButtonStyle ClickHere_FindDoctor = ElevatedButton.styleFrom(
+  minimumSize: const Size( 50, 40),
+  backgroundColor: Color.fromARGB(255, 40, 33, 235),
+  elevation : 0,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular( 100 ),
+  ),
+
+);

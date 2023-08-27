@@ -18,7 +18,7 @@ class LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 231, 51, 180),
+        backgroundColor: Color.fromARGB(255, 253, 253, 253),
         body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             // const CircleAvatar(
@@ -84,7 +84,7 @@ class LoginPageState extends State<LoginPage> {
               ' WELCOME ',
               
               style: TextStyle(
-                color: Colors.white,
+                color: Color.fromARGB(255, 0, 0, 0),
                 fontWeight: FontWeight.bold,
                 fontSize: 30,
               ),
