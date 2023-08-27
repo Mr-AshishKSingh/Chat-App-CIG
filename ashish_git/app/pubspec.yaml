@@ -108,8 +108,11 @@ flutter:
   - assets/images/list.json
   - assets/images/tick.json
   - assets/images/medicine.json
-
-
+  - assets/images/findyourdoctor.json
+  - assets/images/findhospital.json
+  - assets/images/money.json
+  - assets/images/chat.json
+  - assets/images/diet.json
 
 
 flutter_gif: any // or the latest version on Pub
