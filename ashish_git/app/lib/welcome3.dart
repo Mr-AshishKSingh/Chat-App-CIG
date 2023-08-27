@@ -6,12 +6,53 @@ import 'package:app/Pages/searchpage.dart';
 
 
 
-class Welcome3 extends StatelessWidget {
+class Welcome3 extends StatefulWidget {
   const Welcome3({super.key});
 
   @override
+  State<Welcome3> createState() => _Welcome3State();
+}
+
+class _Welcome3State extends State<Welcome3> {
+  int currentPageIndex = 0;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //-------------------
+      bottomNavigationBar: NavigationBar(
+        backgroundColor: Color.fromARGB(134, 30, 12, 72),
+        onDestinationSelected: (int index) {
+          setState(() {
+            currentPageIndex = index;
+          });
+        },
+        indicatorColor: Color.fromARGB(255, 163, 8, 230),
+        selectedIndex: currentPageIndex,
+        destinations: const <Widget>[
+          NavigationDestination(
+            
+            selectedIcon: Icon(Icons.home),
+            icon: Icon(Icons.add_circle),
+            label: 'Under Development',
+
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.add_circle_outline),
+            label: 'Under Development',
+          ),
+          NavigationDestination(
+            selectedIcon: Icon(Icons.add_circle),
+            icon: Icon(Icons.school_outlined),
+            label: 'Under Development',
+          ),
+        ]
+      ),
+
+
+
+
+
+        //---------------
         backgroundColor: Color.fromARGB(251, 255, 255, 255)      ,
           body: SafeArea(
             child: Container(
@@ -29,7 +70,7 @@ class Welcome3 extends StatelessWidget {
                   border: Border.all(color: Color.fromARGB(9, 14, 70, 1)),
                   borderRadius: BorderRadius.circular(0),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     // Padding(
@@ -45,7 +86,7 @@ class Welcome3 extends StatelessWidget {
                     //     ),
                     //   ),
                     // ),
-                    const Padding(
+                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 0.5),
                       child: Text(
                         "WELCOME ",
@@ -150,7 +191,7 @@ class Welcome3 extends StatelessWidget {
                             children: [
                               Center(
                                 child: Container(
-                                    width: 150,
+                                    width: 170,
                                     height: 230,
                                     decoration: BoxDecoration(
                                       color: Color.fromRGBO(29, 24, 168, 0.667),
@@ -160,7 +201,7 @@ class Welcome3 extends StatelessWidget {
                                     ),
                                     child: Column(
                                       children: [
-                                        Padding(
+                                        const Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Text(
                                             "Search Medicine",
@@ -186,8 +227,13 @@ class Welcome3 extends StatelessWidget {
                                           height: 15,
                                         ),
                                         ElevatedButton(
-                                          style: ClickHere,
-                                          child: Text('Click Here '),
+                                          style: ClickHere_SearchMedicine,
+                                          child: Text('Click Here ' , style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15,
+                                              color:
+                                                  Color.fromARGB(255, 254, 253, 253),
+                                            ),),
                                           onPressed: () {
                                             Navigator.push(
                                               context,
@@ -199,8 +245,10 @@ class Welcome3 extends StatelessWidget {
                                       ],
                                     )),
                               ),
+
+                                SizedBox(width: 10),
                               Container(
-                                  width: 150,
+                                  width: 170,
                                   height: 230,
                                   decoration: BoxDecoration(
                                     color: Color.fromRGBO(218, 48, 173, 0.635),
@@ -211,7 +259,7 @@ class Welcome3 extends StatelessWidget {
                                   child: Center(
                                     child: Column(
                                       children: [
-                                        Padding(
+                                        const Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Text(
                                             "Find Your Doctor",
@@ -267,7 +315,7 @@ class Welcome3 extends StatelessWidget {
                             children: [
                               Center(
                                 child: Container(
-                                    width: 150,
+                                    width: 170,
                                     height: 230,
                                     decoration: BoxDecoration(
                                       color: Color.fromRGBO(21, 190, 246, 0.626),
@@ -299,7 +347,7 @@ class Welcome3 extends StatelessWidget {
                 
                                       
                                         ElevatedButton(
-                                          style: ClickHere,
+                                          style: ClickHere_FindHospital,
                                           child: Text('Click Here '),
                                           onPressed: () {
                                             Navigator.push(
@@ -312,8 +360,12 @@ class Welcome3 extends StatelessWidget {
                                       ],
                                     )),
                               ),
+
+                               SizedBox(width: 10),
+
+
                               Container(
-                                  width: 150,
+                                  width: 170,
                                   height: 230,
                                   decoration: BoxDecoration(
                                     color: Color.fromRGBO(255, 177, 10, 0.66),
@@ -349,7 +401,7 @@ class Welcome3 extends StatelessWidget {
                 
                 
                                           ElevatedButton(
-                                          style: ClickHere_FindDoctor,
+                                          style: ClickHere_GetFunds,
                                           child: Text('Click Here '),
                                           onPressed: () {
                                             Navigator.push(
@@ -369,7 +421,7 @@ class Welcome3 extends StatelessWidget {
                             ],
                           ),
                 
-                           SizedBox(
+                          const  SizedBox(
                             height: 20,
                           ),
                 
@@ -379,17 +431,17 @@ class Welcome3 extends StatelessWidget {
                             children: [
                               Center(
                                 child: Container(
-                                    width: 150,
+                                    width: 170,
                                     height: 230,
                                     decoration: BoxDecoration(
                                       color: Color.fromRGBO(255, 4, 75, 0.744),
                                       border: Border.all(
-                                          color: Color.fromARGB(2, 255, 204, 1)),
+                                          color: const Color.fromARGB(2, 255, 204, 1)),
                                       borderRadius: BorderRadius.circular(5),
                                     ),
                                     child: Column(
                                       children: [
-                                        Padding(
+                                        const Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Text(
                                             "Find Chat Groups",
@@ -411,7 +463,7 @@ class Welcome3 extends StatelessWidget {
                 
                                       
                                         ElevatedButton(
-                                          style: ClickHere,
+                                          style: ClickHere_FindChat,
                                           child: Text('Click Here '),
                                           onPressed: () {
                                             Navigator.push(
@@ -424,8 +476,12 @@ class Welcome3 extends StatelessWidget {
                                       ],
                                     )),
                               ),
+
+                               const SizedBox(width: 10),
+
+
                               Container(
-                                  width: 150,
+                                  width: 170,
                                   height: 230,
                                   decoration: BoxDecoration(
                                     color: Color.fromRGBO(38, 247, 73, 0.527),
@@ -461,7 +517,7 @@ class Welcome3 extends StatelessWidget {
                 
                 
                                           ElevatedButton(
-                                          style: ClickHere_FindDoctor,
+                                          style: ClickHere_DietPan,
                                           child: Text('Click Here '),
                                           onPressed: () {
                                             Navigator.push(
