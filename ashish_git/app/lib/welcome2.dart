@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'welcome3.dart';
 import 'button.dart';
 
-class Welcome2 extends StatelessWidget {
+class Welcome2 extends StatefulWidget {
   Welcome2({super.key});
 
+  @override
+  State<Welcome2> createState() => _Welcome2State();
+}
+
+class _Welcome2State extends State<Welcome2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

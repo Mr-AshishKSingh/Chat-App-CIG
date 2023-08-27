@@ -1,14 +1,16 @@
-
-
 import 'package:flutter/material.dart';
 
 
-class SearchPage extends StatelessWidget {
-  SearchPage({super.key});
+class SearchPage extends StatefulWidget {
+  const SearchPage({Key? key}) : super(key: key);
 
-  Widget build(BuildContext context) {
-    return Scaffold();
-
- 
+  @override
+  State<SearchPage> createState() => searchpageState();
 }
-} 
+
+class searchpageState extends State<SearchPage>{
+  @override 
+  Widget build(BuildContext context ){
+    return Scaffold();
+  }
+}
