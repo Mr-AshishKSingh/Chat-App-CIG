@@ -136,3 +136,50 @@ final ButtonStyle ClickHere_DietPan = ElevatedButton.styleFrom(
   ),
 
 );
+
+
+
+final ButtonStyle drawerlogout = ElevatedButton.styleFrom(
+  minimumSize: const Size( 10, 40),
+  backgroundColor: Color.fromARGB(255, 255, 2, 2),
+  elevation : 10,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular( 100 ),
+  ),
+
+);
+
+
+final ButtonStyle drawerprofile = ElevatedButton.styleFrom(
+  minimumSize: const Size( 10, 40),
+  backgroundColor: Color.fromARGB(103, 158, 129, 239),
+  elevation : 0,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular( 10 ),
+  ),
+
+);
+
+
+final ButtonStyle profilepagehomebutton = ElevatedButton.styleFrom(
+  minimumSize: const Size( 10, 40),
+  backgroundColor: Color.fromARGB(235, 68, 236, 118),
+  elevation : 0,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular( 10 ),
+  ),
+
+);
+
+
+
+final ButtonStyle profilepagelogoutbutton = ElevatedButton.styleFrom(
+  minimumSize: const Size( 10, 40),
+  backgroundColor: Color.fromARGB(182, 251, 2, 2),
+  elevation : 0,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular( 10 ),
+  ),
+
+);
+

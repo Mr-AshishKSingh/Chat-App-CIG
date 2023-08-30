@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="images">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/animatoin1.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/chat.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/money.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/tick.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/downarrow.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/doctor4.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/findyourdoctor.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/diet.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/doctor3.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/doctor2.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/findhospital.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/list.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/pfp2.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/animation1.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/doctorwithcycle.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/medicine.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/WELCOME.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/assets/images/doctor.png.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

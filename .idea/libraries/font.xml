@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="font">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/laraib_git/health/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/font/Cera-Pro-Medium.otf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/laraib_git/health/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/font/Cera-Pro-Bold.otf.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

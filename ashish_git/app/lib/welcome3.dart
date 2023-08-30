@@ -1,5 +1,7 @@
+import 'package:app/Pages/chatgroups.dart';
 import 'package:app/Pages/findyourdoctorpage.dart';
 import 'package:app/button.dart';
+import 'package:app/service/authentication.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:app/Pages/searchpage.dart';
@@ -15,142 +17,102 @@ class Welcome3 extends StatefulWidget {
 
 class _Welcome3State extends State<Welcome3> {
   int currentPageIndex = 0;
+  AuthService authService = AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //-------------------
-      bottomNavigationBar: NavigationBar(
-        backgroundColor: Color.fromARGB(134, 30, 12, 72),
-        onDestinationSelected: (int index) {
-          setState(() {
-            currentPageIndex = index;
-          });
-        },
-        indicatorColor: Color.fromARGB(255, 163, 8, 230),
-        selectedIndex: currentPageIndex,
-        destinations: const <Widget>[
-          NavigationDestination(
-            
-            selectedIcon: Icon(Icons.home),
-            icon: Icon(Icons.add_circle),
-            label: 'Under Development',
+      appBar: AppBar(
+        elevation: 22,
+        title: Center(child: const Text('Welcome')),
+        backgroundColor: Color.fromARGB(255, 61, 35, 207),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15), bottomRight: Radius.circular(15)),
+        ), 
+        ),
 
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.add_circle_outline),
-            label: 'Under Development',
-          ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.add_circle),
-            icon: Icon(Icons.school_outlined),
-            label: 'Under Development',
-          ),
-        ]
-      ),
+
+      
+      //-------------------
+      // bottomNavigationBar: NavigationBar(
+      //   backgroundColor: Color.fromARGB(134, 30, 12, 72),
+      //   onDestinationSelected: (int index) {
+      //     setState(() {
+      //       currentPageIndex = index;
+      //     });
+      //   },
+      //   indicatorColor: Color.fromARGB(255, 163, 8, 230),
+      //   selectedIndex: currentPageIndex,
+      //   destinations: const <Widget>[
+      //     NavigationDestination(
+            
+      //       selectedIcon: Icon(Icons.home),
+      //       icon: Icon(Icons.add_circle),
+      //       label: 'Under Development',
+
+      //     ),
+      //     NavigationDestination(
+      //       icon: Icon(Icons.add_circle_outline),
+      //       label: 'Under Development',
+      //     ),
+      //     NavigationDestination(
+      //       selectedIcon: Icon(Icons.add_circle),
+      //       icon: Icon(Icons.school_outlined),
+      //       label: 'Under Development',
+      //     ),
+      //   ]
+      // ),
 
 
 
 
 
         //---------------
-        backgroundColor: Color.fromARGB(251, 255, 255, 255)      ,
+        backgroundColor: Color.fromARGB(250, 255, 255, 255)      ,
           body: SafeArea(
             child: Container(
               child: Column(
             children: [
-              // const SizedBox(
-              //   height: 10,
-              // ),
-              // const SizedBox(
-              //   height: 10,
-              // ),
-              Container(
-                decoration: BoxDecoration(
-                  color: Color.fromRGBO(251, 255, 255, 255),
-                  border: Border.all(color: Color.fromARGB(9, 14, 70, 1)),
-                  borderRadius: BorderRadius.circular(0),
-                ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    // Padding(
-                    //   padding: const EdgeInsets.symmetric(horizontal: 20),
-                    //   child: Container(
-                    //     alignment: Alignment.topLeft,
-                    //     //Color: Color.fromARGB(255, 255, 255, 255),
-                    //     width: 100,
-                    //     child: Lottie.asset(
-                    //       "assets/images/animatoin1.json",
-                    //       width: 100,
-                    //       height: 100,
-                    //     ),
-                    //   ),
-                    // ),
-                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 0.5),
-                      child: Text(
-                        "WELCOME ",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            color: Color.fromARGB(227, 1, 18, 80)),
-                      ),
-                    ),
-                    // ElevatedButton(
-                    //   style: gobackbutton_welcome3,
-                    //   onPressed: () {
-                    //     Navigator.pop(context);
-                    //   },
-                    //   child: const Text('Go back!'),
-                    // ),
-                  ],
-                ),
+             
+
+              ElevatedButton(
+                child : Text("LOG OUT "),
+                onPressed: () {
+                  authService.signOut();
+                }
               ),
-              // const SizedBox(
-              //   height: 10,
-              // ),
+
+
               // Container(
-              //   decoration: BoxDecoration(
-              //     color: Color.fromRGBO(241, 241, 241, 1),
-              //     border: Border.all(color: Color.fromARGB(2, 255, 204, 1)),
-              //     borderRadius: BorderRadius.circular(0),
-              //   ),
-              //   margin: EdgeInsets.symmetric(horizontal: 0),
-              //   padding: EdgeInsets.all(3),
-              // ),
-              // const SizedBox(
-              //   height: 5,
-              // ),
-              Container(
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(9, 14, 70, 1),
-                    border: Border.all(color: Color.fromARGB(9, 14, 70, 1)),
-                    borderRadius: BorderRadius.circular(0),
-                  ),
-                  margin: EdgeInsets.symmetric(horizontal: 0),
-                  padding: EdgeInsets.all(10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Lottie.asset(
-                          "assets/images/list.json",
-                          width: 50,
-                          height: 50,
-                        ),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Text("Please select your requirement ",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15,
-                              color: Color.fromARGB(255, 254, 253, 253),
-                            )),
-                      ),
-                    ],
-                  )),
+              //   height: 150,
+              //     decoration: BoxDecoration(
+              //       color: Color.fromRGBO(9, 14, 70, 1),
+              //       //border: Border.all(color: Color.fromARGB(255, 52, 255, 7)),
+              //       borderRadius: BorderRadius.circular(0),
+              //     ),
+              //     margin: EdgeInsets.symmetric(horizontal: 0),
+              //     padding: EdgeInsets.all(10),
+              //     child: Row(
+              //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //       children: [
+              //         Padding(
+              //           padding: const EdgeInsets.symmetric(horizontal: 5),
+              //           child: Lottie.asset(
+              //             "assets/images/list.json",
+              //             width: 50,
+              //             height: 50,
+              //           ),
+              //         ),
+              //         const Padding(
+              //           padding: EdgeInsets.all(10),
+              //           child: Text(" WELCOME Please select your requirement ",
+              //               style: TextStyle(
+              //                 fontWeight: FontWeight.bold,
+              //                 fontSize: 15,
+              //                 color: Color.fromARGB(255, 254, 253, 253),
+              //               )),
+              //         ),
+              //       ],
+              //     )),
           
           
               const SizedBox(
@@ -303,6 +265,7 @@ class _Welcome3State extends State<Welcome3> {
                                   ))
                             ],
                           ),
+
                 
                           SizedBox(
                             height: 20,
@@ -469,7 +432,7 @@ class _Welcome3State extends State<Welcome3> {
                                             Navigator.push(
                                               context,
                                               MaterialPageRoute(
-                                                  builder: (context) => SearchPage()),
+                                                  builder: (context) => chatpage()),
                                             );
                                           },
                                         ),
