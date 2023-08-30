@@ -98,11 +98,44 @@ class chatpageState extends State<chatpage> {
                             color: Colors.white,
                           ),
                           child: Center(
-                            child: Text(userName[0] , style: TextStyle( fontWeight: FontWeight.bold,color: Colors.black),),
+                            child: Text(userName[0] , style: TextStyle(fontSize: 30 ,  fontWeight: FontWeight.bold,color: Colors.black),),
                           ),
                         ),
-                        Text(userName , style: TextStyle( fontWeight: FontWeight.bold,color: Colors.white),),
-                        Text(email , style: TextStyle( fontWeight: FontWeight.bold,color: Colors.white),)
+                        // 
+                        
+                        SizedBox(height: 10,),
+                          Container(
+                            height: 20,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                color: Color.fromARGB(136, 65, 52, 181),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  
+                                  userName,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
+                                ),
+                              )),
+                          SizedBox(height: 5,),
+                          Container(
+
+                            height: 20,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Color.fromARGB(136, 65, 52, 181),
+                            ),
+                            child: Center(
+                              child: Text(
+                                email,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
+                            ),
+                          )
                    
                       ],
                      ),
