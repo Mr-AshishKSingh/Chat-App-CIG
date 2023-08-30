@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="flutter_assets">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/NOTICES.Z.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/FontManifest.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/AssetManifest.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ashish_git/app/build/app/intermediates/compressed_assets/release/out/assets/flutter_assets/AssetManifest.bin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

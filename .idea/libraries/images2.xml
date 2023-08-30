@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="images2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/laraib_git/health/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/images/download.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/laraib_git/health/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/images/images.png.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
