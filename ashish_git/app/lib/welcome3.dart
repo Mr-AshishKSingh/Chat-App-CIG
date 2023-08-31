@@ -8,7 +8,7 @@ import 'package:app/service/authentication.dart';
 import 'package:app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:app/Pages/searchpage.dart';
+import 'package:app/Pages/searchmedspage.dart';
 
 class Welcome3 extends StatefulWidget {
   const Welcome3({super.key});
@@ -18,7 +18,6 @@ class Welcome3 extends StatefulWidget {
 }
 
 class _Welcome3State extends State<Welcome3> {
-  
   AuthService authService = AuthService();
 
   String userName = "";
@@ -48,17 +47,15 @@ class _Welcome3State extends State<Welcome3> {
     return Scaffold(
         appBar: AppBar(
           actions: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.search_sharp),
+            Lottie.asset(
+              "assets/images/namaste.json",
+              width: 100,
+              height: 300,
             ),
-
-            // ElevatedButton(onPressed: (){}, child: Text("ashish"))
-            // Image.asset('assets/images/Logo.png', height: 50, width: 50,),
           ],
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 72, 60, 229),
-          title: Text('Chat Groups'),
+          title: Text('WELCOME'),
         ),
         drawer: Drawer(
           backgroundColor: Color.fromARGB(255, 83, 73, 228),
@@ -66,163 +63,34 @@ class _Welcome3State extends State<Welcome3> {
             padding: EdgeInsets.zero,
             children: [
               Lottie.asset(
-                "assets/images/drawer.json",
+                "assets/images/profilephotonew.json",
                 width: 100,
                 height: 300,
               ),
-
               Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Container(
-                    height: 150,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Color.fromARGB(132, 99, 104, 207),
-                    ),
-                    child: Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 50,
-                            width: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(100),
-                              color: Colors.white,
-                            ),
-                            child: Center(
-                              child: Text(
-                                userName[0],
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
-                              ),
-                            ),
-                          ),
-
-
-                          SizedBox(height: 10,),
-                          Container(
-                            height: 20,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                                color: Color.fromARGB(136, 65, 52, 181),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  
-                                  userName,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white),
-                                ),
-                              )),
-                          SizedBox(height: 5,),
-                          Container(
-
-                            height: 20,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Color.fromARGB(136, 65, 52, 181),
-                            ),
-                            child: Center(
-                              child: Text(
-                                email,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                child: Text(
+                  userName,
+                  style:
+                      TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
                 ),
               ),
 
-              //  Center(
-              //   child: Padding(
 
-              //     padding: const EdgeInsets.all(10.0),
-              //     child: Container(
-              //       height: 40,
-              //       decoration: BoxDecoration(
-              //         borderRadius: BorderRadius.circular(5),
-              //         color: Color.fromARGB(132, 99, 104, 207),
+              Center(
+                child: Text(
+                  email,
+                  style:
+                      TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                ),
+              ),
 
-              //       ),
-
-              //        child: Row(
-              //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //         children: [
-              //          Padding(
-              //            padding: const EdgeInsets.all(8),
-              //            child: Text(email , style: TextStyle( fontWeight: FontWeight.bold,color: Colors.white), )
-              //          )
-              //         ],
-              //        ),
-
-              //     ),
-              //   ),
-              // ),
-
-              const Divider(
+              const SizedBox(
                 height: 10,
-                thickness: 5,
               ),
 
-              //  Text(userName , style: TextStyle(color: Colors.white)),
-              //   Text(email , style: TextStyle(color: Colors.white)),
 
-              ListTile(
-                selectedColor: Colors.white,
-                selected: true,
-                contentPadding: EdgeInsets.all(10),
-                leading: const Icon(Icons.hub_rounded),
-                title: const Text('Groups'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-
-              // ListTile(
-              //   selectedColor: Colors.white,
-              //   selected: true,
-              //   contentPadding: EdgeInsets.all(10),
-              //   leading: const Icon(Icons.hub_rounded),
-
-              //   title: const Text('Groups'),
-              //   onTap: () {
-              //     Navigator.pop(context);
-              //   },
-              // ),
-
-              // ListTile(
-              //   selectedColor: Colors.white,
-              //   selected: true,
-              //   contentPadding: EdgeInsets.all(10),
-              //   leading: const Icon(Icons.hub_rounded),
-
-              //   title: const Text('Groups'),
-              //   onTap: () {
-              //     Navigator.pop(context);
-              //   },
-              // ),
-
-              // ListTile(
-              //   selectedColor: Colors.white,
-              //   selected: true,
-              //   contentPadding: EdgeInsets.all(10),
-              //   leading: const Icon(Icons.hub_rounded),
-
-              //   title: const Text('Groups'),
-              //   onTap: () {
-              //     Navigator.pop(context);
-              //   },
-              //),
-
+          
+             
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 10,
@@ -236,6 +104,47 @@ class _Welcome3State extends State<Welcome3> {
                 ),
               ),
 
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                ),
+                child: ElevatedButton(
+                  style: drawerprofile,
+                  child: Text('Groups'),
+                  onPressed: () {
+                    nextScreenReplace(context, const chatpage());
+                  },
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                ),
+                child: ElevatedButton(
+                  style: drawerprofile,
+                  child: Text('Contact Us'),
+                  onPressed: () {
+                    nextScreenReplace(context, const chatpage());
+                  },
+                ),
+              ),
+
+
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                ),
+                child: ElevatedButton(
+                  style: drawerprofile,
+                  child: Text('About '),
+                  onPressed: () {
+                    nextScreenReplace(context, const chatpage());
+                  },
+                ),
+              ),
+
+              
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 70,
@@ -254,98 +163,18 @@ class _Welcome3State extends State<Welcome3> {
           ),
         ),
 
-        //-------------------
-        // bottomNavigationBar: NavigationBar(
-        //   backgroundColor: Color.fromARGB(134, 30, 12, 72),
-        //   onDestinationSelected: (int index) {
-        //     setState(() {
-        //       currentPageIndex = index;
-        //     });
-        //   },
-        //   indicatorColor: Color.fromARGB(255, 163, 8, 230),
-        //   selectedIndex: currentPageIndex,
-        //   destinations: const <Widget>[
-        //     NavigationDestination(
-
-        //       selectedIcon: Icon(Icons.home),
-        //       icon: Icon(Icons.add_circle),
-        //       label: 'Under Development',
-
-        //     ),
-        //     NavigationDestination(
-        //       icon: Icon(Icons.add_circle_outline),
-        //       label: 'Under Development',
-        //     ),
-        //     NavigationDestination(
-        //       selectedIcon: Icon(Icons.add_circle),
-        //       icon: Icon(Icons.school_outlined),
-        //       label: 'Under Development',
-        //     ),
-        //   ]
-        // ),
-
         //---------------
         backgroundColor: Color.fromARGB(190, 107, 113, 238),
         body: SafeArea(
           child: Container(
               child: Column(
             children: [
-              // ElevatedButton(
-              //     child: Text("LOG OUT "),
-              //     onPressed: () {
-              //       authService.signOut();
-              //     }),
-
-              // Container(
-              //   height: 150,
-              //     decoration: BoxDecoration(
-              //       color: Color.fromRGBO(9, 14, 70, 1),
-              //       //border: Border.all(color: Color.fromARGB(255, 52, 255, 7)),
-              //       borderRadius: BorderRadius.circular(0),
-              //     ),
-              //     margin: EdgeInsets.symmetric(horizontal: 0),
-              //     padding: EdgeInsets.all(10),
-              //     child: Row(
-              //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //       children: [
-              //         Padding(
-              //           padding: const EdgeInsets.symmetric(horizontal: 5),
-              //           child: Lottie.asset(
-              //             "assets/images/list.json",
-              //             width: 50,
-              //             height: 50,
-              //           ),
-              //         ),
-              //         const Padding(
-              //           padding: EdgeInsets.all(10),
-              //           child: Text(" WELCOME Please select your requirement ",
-              //               style: TextStyle(
-              //                 fontWeight: FontWeight.bold,
-              //                 fontSize: 15,
-              //                 color: Color.fromARGB(255, 254, 253, 253),
-              //               )),
-              //         ),
-              //       ],
-              //     )),
-
               const SizedBox(
                 height: 5,
               ),
-
-              // Container(
-              //   decoration: BoxDecoration(
-              //     color: Color.fromRGBO(47, 9, 234, 1),
-              //     border: Border.all(color: Color.fromARGB(2, 255, 204, 1)),
-              //     borderRadius: BorderRadius.circular(0),
-              //   ),
-              //   margin: EdgeInsets.symmetric(horizontal: 0),
-              //   padding: EdgeInsets.all(3),
-              // ),
-
               const SizedBox(
                 height: 10,
               ),
-
               Expanded(
                 child: ListView(children: [
                   Container(
@@ -414,7 +243,7 @@ class _Welcome3State extends State<Welcome3> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      SearchPage()),
+                                                      ChatScreen()),
                                             );
                                           },
                                         ),
@@ -479,8 +308,7 @@ class _Welcome3State extends State<Welcome3> {
                                     width: 170,
                                     height: 230,
                                     decoration: BoxDecoration(
-                                      color:
-                                          Color.fromRGBO(0, 225, 255, 0.928),
+                                      color: Color.fromRGBO(0, 225, 255, 0.928),
                                       border: Border.all(
                                           color:
                                               Color.fromARGB(2, 255, 204, 1)),
@@ -513,7 +341,7 @@ class _Welcome3State extends State<Welcome3> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      SearchPage()),
+                                                      ChatScreen()),
                                             );
                                           },
                                         ),
