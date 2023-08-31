@@ -2,6 +2,7 @@ import 'package:app/registration.dart';
 import 'package:app/welcome3.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'LoginPage.dart';
 import 'helper/helper_function.dart';
 
@@ -9,6 +10,8 @@ import 'helper/helper_function.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+    
+  
   await Firebase.initializeApp();
   runApp(const MyApp());
 }
