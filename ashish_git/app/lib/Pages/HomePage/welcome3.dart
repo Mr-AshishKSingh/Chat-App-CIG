@@ -1,14 +1,15 @@
-import 'package:app/LoginPage.dart';
-import 'package:app/Pages/chatgroups.dart';
-import 'package:app/Pages/findyourdoctorpage.dart';
-import 'package:app/Pages/profilepage.dart';
-import 'package:app/button.dart';
-import 'package:app/helper/helper_function.dart';
-import 'package:app/service/authentication.dart';
+import 'package:app/Pages/FIndHospitals/findhospital.dart';
+import 'package:app/Pages/Login/LoginPage.dart';
+import 'package:app/Pages/ChatGroups/chatgroups.dart';
+import 'package:app/Pages/FindDoctor/findyourdoctorpage.dart';
+import 'package:app/Pages/Profile/profilepage.dart';
+import 'package:app/SharedData/button.dart';
+import 'package:app/SharedData/helper/helper_function.dart';
+import 'package:app/FireBase/service/authentication.dart';
 import 'package:app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:app/Pages/searchmedspage.dart';
+import 'package:app/Pages/FindMedicine/searchmeds.dart';
 
 class Welcome3 extends StatefulWidget {
   const Welcome3({super.key});
@@ -243,7 +244,7 @@ class _Welcome3State extends State<Welcome3> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      ChatScreen()),
+                                                      searchmeds()),
                                             );
                                           },
                                         ),
@@ -341,7 +342,7 @@ class _Welcome3State extends State<Welcome3> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      ChatScreen()),
+                                                      findhospitalpage()),
                                             );
                                           },
                                         ),

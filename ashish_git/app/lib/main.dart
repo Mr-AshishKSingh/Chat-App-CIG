@@ -1,18 +1,31 @@
-import 'package:app/registration.dart';
-import 'package:app/welcome3.dart';
+import 'package:app/Pages/Login/registration.dart';
+import 'package:app/Pages/HomePage/welcome3.dart';
+import 'package:app/shared/constant.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'LoginPage.dart';
-import 'helper/helper_function.dart';
+import 'Pages/Login/LoginPage.dart';
+import 'package:app/SharedData/helper/helper_function.dart';
 
 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  if (kIsWeb) {
+    await Firebase.initializeApp(
+        options: FirebaseOptions(
+            apiKey: Constants.apiKey,
+            appId: Constants.appId,
+            messagingSenderId: Constants.messagingSenderId,
+            projectId: Constants.projectId));
+  } else {
+    await Firebase.initializeApp();
+  }
+
     
   
-  await Firebase.initializeApp();
+ 
   runApp(const MyApp());
 }
 

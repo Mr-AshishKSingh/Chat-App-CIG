@@ -1,9 +1,9 @@
-import 'package:app/Pages/chat_page.dart';
-import 'package:app/helper/helper_function.dart';
-import 'package:app/service/database_service.dart';
+import 'package:app/Pages/ChatGroups/chat_page.dart';
+import 'package:app/SharedData/helper/helper_function.dart';
+import 'package:app/FireBase/service/database_service.dart';
 import 'package:app/widgets/widgets.dart';
 
-import 'package:app/pages/chat_page.dart';
+import 'package:app/pages/ChatGroups/chat_page.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
