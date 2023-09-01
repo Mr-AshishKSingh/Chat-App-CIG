@@ -38,15 +38,17 @@ class _MessageTileState extends State<MessageTile> {
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20),
                     bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)
                   )
                 : const BorderRadius.only(
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20),
                     bottomRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(20),
                   ),
             color: widget.sentByMe
-                ? Color.fromARGB(255, 83, 73, 228)
-                : Colors.grey[700]),
+                ? Color.fromARGB(69, 3, 19, 235)
+                : Color.fromARGB(54, 81, 62, 255)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -56,7 +58,7 @@ class _MessageTileState extends State<MessageTile> {
               style: const TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Color.fromARGB(255, 0, 0, 0),
                   letterSpacing: -0.5),
             ),
             const SizedBox(

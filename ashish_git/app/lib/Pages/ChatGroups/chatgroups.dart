@@ -1,11 +1,11 @@
 
-import 'package:app/LoginPage.dart';
-import 'package:app/Pages/profilepage.dart';
-import 'package:app/Pages/search_page.dart';
-import 'package:app/button.dart';
-import 'package:app/helper/helper_function.dart';
-import 'package:app/service/authentication.dart';
-import 'package:app/service/database_service.dart';
+import 'package:app/Pages/Login/LoginPage.dart';
+import 'package:app/Pages/Profile/profilepage.dart';
+import 'package:app/Pages/ChatGroups/search_page.dart';
+import 'package:app/SharedData/button.dart';
+import 'package:app/SharedData/helper/helper_function.dart';
+import 'package:app/FireBase/service/authentication.dart';
+import 'package:app/FireBase/service/database_service.dart';
 import 'package:app/widgets/group_tile.dart';
 import 'package:app/widgets/widgets.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -93,131 +93,110 @@ class chatpageState extends State<chatpage> {
         title: Text('Chat Groups'),
       ),
       drawer: Drawer(
-        backgroundColor: Color.fromARGB(255, 83, 73, 228),
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            Lottie.asset(
-              "assets/images/drawer.json",
-              width: 100,
-              height: 300,
-            ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Container(
-                  height: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Color.fromARGB(132, 99, 104, 207),
-                  ),
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.white,
-                          ),
-                          child: Center(
-                            child: Text(
-                              userName[0],
-                              style: TextStyle(
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
-                            ),
-                          ),
-                        ),
-                        //
-
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Container(
-                            height: 20,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Color.fromARGB(136, 65, 52, 181),
-                            ),
-                            child: Center(
-                              child: Text(
-                                userName,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
-                              ),
-                            )),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Container(
-                          height: 20,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Color.fromARGB(136, 65, 52, 181),
-                          ),
-                          child: Center(
-                            child: Text(
-                              email,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
+          backgroundColor: Color.fromARGB(255, 83, 73, 228),
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              Lottie.asset(
+                "assets/images/profilephotonew.json",
+                width: 100,
+                height: 300,
+              ),
+              Center(
+                child: Text(
+                  userName,
+                  style:
+                      TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
                 ),
               ),
-            ),
-            const Divider(
-              height: 10,
-              thickness: 5,
-            ),
-            ListTile(
-              selectedColor: Colors.white,
-              selected: true,
-              contentPadding: EdgeInsets.all(10),
-              leading: const Icon(Icons.hub_rounded),
-              title: const Text('Groups'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 10,
+
+
+              Center(
+                child: Text(
+                  email,
+                  style:
+                      TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                ),
               ),
-              child: ElevatedButton(
-                style: drawerprofile,
-                child: Text('Profile'),
-                onPressed: () {
-                  nextScreenReplace(context, const ProfilePage());
-                },
+
+              const SizedBox(
+                height: 10,
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 70,
+
+
+          
+             
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                ),
+                child: ElevatedButton(
+                  style: drawerprofile,
+                  child: Text('Profile'),
+                  onPressed: () {
+                    nextScreenReplace(context, const ProfilePage());
+                  },
+                ),
               ),
-              child: ElevatedButton(
-                style: drawerlogout,
-                child: Text('Logout'),
-                onPressed: () {
-                  authService.signOut().whenComplete(() {
-                    nextScreenReplace(context, const LoginPage());
-                  });
-                },
+
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                ),
+                child: ElevatedButton(
+                  style: drawerprofile,
+                  child: Text('Groups'),
+                  onPressed: () {
+                    nextScreenReplace(context, const chatpage());
+                  },
+                ),
               ),
-            ),
-          ],
+
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                ),
+                child: ElevatedButton(
+                  style: drawerprofile,
+                  child: Text('Contact Us'),
+                  onPressed: () {
+                    nextScreenReplace(context, const chatpage());
+                  },
+                ),
+              ),
+
+
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                ),
+                child: ElevatedButton(
+                  style: drawerprofile,
+                  child: Text('About '),
+                  onPressed: () {
+                    nextScreenReplace(context, const chatpage());
+                  },
+                ),
+              ),
+
+              
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 70,
+                ),
+                child: ElevatedButton(
+                  style: drawerlogout,
+                  child: Text('Logout'),
+                  onPressed: () {
+                    authService.signOut().whenComplete(() {
+                      nextScreenReplace(context, const LoginPage());
+                    });
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
       body:
     
        groupList(),

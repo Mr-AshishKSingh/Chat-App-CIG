@@ -1,5 +1,6 @@
-import 'package:app/service/database_service.dart';
-import 'package:app/welcome3.dart';
+
+import 'package:app/FireBase/service/database_service.dart';
+import 'package:app/Pages/HomePage/welcome3.dart';
 
 import 'package:app/widgets/widgets.dart';
 import 'package:firebase_auth/firebase_auth.dart';

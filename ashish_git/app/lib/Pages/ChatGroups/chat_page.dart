@@ -1,6 +1,6 @@
-import 'package:app/service/database_service.dart';
+import 'package:app/FireBase/service/database_service.dart';
 import 'package:app/widgets/widgets.dart';
-import 'package:app/pages/group_info.dart';
+import 'package:app/pages/ChatGroups/group_info.dart';
 
 import 'package:app/widgets/message_tile.dart';
 

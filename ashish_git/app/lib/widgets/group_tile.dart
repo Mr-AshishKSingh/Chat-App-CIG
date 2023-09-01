@@ -1,5 +1,5 @@
 //import 'package:app/pages/chat_page.dart';
-import 'package:app/pages/chat_page.dart';
+import 'package:app/pages/ChatGroups/chat_page.dart';
 import 'package:app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';

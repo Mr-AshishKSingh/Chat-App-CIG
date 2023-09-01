@@ -1,6 +1,6 @@
-import 'package:app/service/authentication.dart';
-import 'package:app/service/database_service.dart';
-import 'package:app/welcome3.dart';
+import 'package:app/FireBase/service/authentication.dart';
+import 'package:app/FireBase/service/database_service.dart';
+import 'package:app/Pages/HomePage/welcome3.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
@@ -8,10 +8,10 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:app/widgets/widgets.dart';
 //import 'package:app/service/authentication.dart';
-import 'package:app/helper/helper_function.dart';
+import 'package:app/SharedData/helper/helper_function.dart';
 
-import 'button.dart';
-import 'registration.dart';
+import '../../SharedData/button.dart';
+import 'package:app/Pages/Login/registration.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
