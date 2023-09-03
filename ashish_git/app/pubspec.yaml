@@ -34,7 +34,7 @@ dependencies:
   firebase_core: ^2.15.1
   flutter:
     sdk: flutter
-  google_fonts: ^2.1.0
+ 
   lottie: ^2.6.0
   shared_preferences: ^2.2.0
   chat_gpt_sdk:
@@ -44,6 +44,7 @@ dependencies:
   
   flutter_dotenv: ^5.1.0
   velocity_x: ^3.6.0
+  google_fonts: ^5.1.0
 
 dev_dependencies:
 
@@ -131,5 +132,8 @@ flutter:
     - assets/images/profilecircle2.json
     - assets/images/namaste.json
     - assets/images/profilephotonew.json
-
+    - assets/images/profilelogo.json
+    - assets/images/userpfp.json
+    - assets/images/userpfp.png
+    - assets/images/dialog.json
 flutter_gif: any // or the latest version on Pub
