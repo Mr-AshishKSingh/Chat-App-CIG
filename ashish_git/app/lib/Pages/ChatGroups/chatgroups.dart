@@ -10,6 +10,7 @@ import 'package:app/widgets/group_tile.dart';
 import 'package:app/widgets/widgets.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
 class chatpage extends StatefulWidget {
@@ -124,8 +125,7 @@ class chatpageState extends State<chatpage> {
               ),
 
 
-          
-             
+
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 10,
@@ -152,6 +152,10 @@ class chatpageState extends State<chatpage> {
                 ),
               ),
 
+
+              
+
+
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 10,
@@ -166,6 +170,7 @@ class chatpageState extends State<chatpage> {
               ),
 
 
+              
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 10,
@@ -203,7 +208,7 @@ class chatpageState extends State<chatpage> {
       floatingActionButton: FloatingActionButton(onPressed: () {
         popUpDialog(context);
       },
-      backgroundColor: Color.fromARGB(0, 255, 255, 255),
+      backgroundColor: Color.fromARGB(0, 255, 0, 0),
       focusColor: Color.fromARGB(0, 255, 255, 255),
        elevation: 0, child:  Lottie.asset("assets/images/addbutton2.json" , 
       ),),
@@ -218,9 +223,19 @@ class chatpageState extends State<chatpage> {
         builder: (context) {
           return StatefulBuilder(builder: ((context, setState) {
             return AlertDialog(
-              title: const Text(
+              shape: 
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+              backgroundColor: Color.fromARGB(255, 85, 74, 240),
+              title:  Text(
                 "Create a group",
                 textAlign: TextAlign.left,
+                style : GoogleFonts.firaSans( 
+                  textStyle: TextStyle(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               content: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -230,27 +245,36 @@ class chatpageState extends State<chatpage> {
                           child: CircularProgressIndicator(
                               color: Theme.of(context).primaryColor),
                         )
-                      : TextField(
-                          onChanged: (val) {
-                            setState(() {
-                              groupName = val;
-                            });
-                          },
-                          style: const TextStyle(color: Colors.black),
-                          decoration: InputDecoration(
-                              enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Theme.of(context).primaryColor),
-                                  borderRadius: BorderRadius.circular(20)),
-                              errorBorder: OutlineInputBorder(
-                                  borderSide:
-                                      const BorderSide(color: Colors.red),
-                                  borderRadius: BorderRadius.circular(20)),
-                              focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Theme.of(context).primaryColor),
-                                  borderRadius: BorderRadius.circular(20))),
-                        ),
+                        
+                      : 
+                      
+                      Lottie.asset("assets/images/dialog.json"),
+                      
+                      Container(
+                        decoration:
+                            BoxDecoration(color: Color.fromARGB(209, 236, 236, 240),borderRadius: BorderRadius.circular(20)),
+                        child: TextField(
+                            onChanged: (val) {
+                              setState(() {
+                                groupName = val;
+                              });
+                            },
+                            style: const TextStyle(color: Colors.white),
+                            decoration: InputDecoration(
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Theme.of(context).primaryColor),
+                                    borderRadius: BorderRadius.circular(20)),
+                                errorBorder: OutlineInputBorder(
+                                    borderSide:
+                                        const BorderSide(color: Colors.red),
+                                    borderRadius: BorderRadius.circular(20)),
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Theme.of(context).primaryColor),
+                                    borderRadius: BorderRadius.circular(20))),
+                          ),
+                      ),
                 ],
               ),
               actions: [
@@ -258,8 +282,7 @@ class chatpageState extends State<chatpage> {
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  style: ElevatedButton.styleFrom(
-                      primary: Theme.of(context).primaryColor),
+                 style :buttonPrimary,
                   child: const Text("CANCEL"),
                 ),
                 ElevatedButton(
@@ -280,8 +303,7 @@ class chatpageState extends State<chatpage> {
                           context, Colors.green, "Group created successfully.");
                     }
                   },
-                  style: ElevatedButton.styleFrom(
-                      primary: Theme.of(context).primaryColor),
+                  style: buttonPrimary,
                   child: const Text("CREATE"),
                 )
               ],
@@ -299,16 +321,27 @@ class chatpageState extends State<chatpage> {
         if (snapshot.hasData) {
           if (snapshot.data['groups'] != null) {
             if (snapshot.data['groups'].length != 0) {
-              return ListView.builder(
-                itemCount: snapshot.data['groups'].length,
-                itemBuilder: (context, index) {
-                  
-                  int reverseIndex = snapshot.data['groups'].length - index - 1;
-                  return GroupTile(
-                      groupId: getId(snapshot.data['groups'][reverseIndex]),
-                      groupName: getName(snapshot.data['groups'][reverseIndex]),
-                      userName: snapshot.data['fullName']);
-                },
+              return Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color.fromARGB(255, 72, 60, 229),
+                      Color.fromARGB(255, 33, 20, 128), // Change gradient colors as needed
+                    ],
+                  ),),
+                child: ListView.builder(
+                  itemCount: snapshot.data['groups'].length,
+                  itemBuilder: (context, index) {
+                    
+                    int reverseIndex = snapshot.data['groups'].length - index - 1;
+                    return GroupTile(
+                        groupId: getId(snapshot.data['groups'][reverseIndex]),
+                        groupName: getName(snapshot.data['groups'][reverseIndex]),
+                        userName: snapshot.data['fullName']);
+                  },
+                ),
               );
             } else {
               return noGroupWidget();
@@ -331,6 +364,16 @@ class chatpageState extends State<chatpage> {
 
 noGroupWidget() {
     return Container(
+   decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromARGB(255, 72, 60, 229),
+              Color.fromARGB(255, 33, 20, 128), // Change gradient colors as needed
+            ],
+          ),
+        ),
       padding: const EdgeInsets.symmetric(horizontal: 25),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -345,9 +388,16 @@ noGroupWidget() {
           const SizedBox(
             height: 20,
           ),
-          const Text(
+           Text(
             "You've not joined any groups, tap on the add icon to create a group or also search from top search button.",
             textAlign: TextAlign.center,
+            style : GoogleFonts.aBeeZee(
+              textStyle: TextStyle(
+                color: Color.fromARGB(255, 255, 255, 255),
+                fontSize: 15,
+                fontWeight: FontWeight.w200,
+              ),
+            ),
           )
         ],
       ),

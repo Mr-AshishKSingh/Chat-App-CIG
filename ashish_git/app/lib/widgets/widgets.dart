@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 const textInputDecoration = InputDecoration(
   
-  fillColor: Color.fromARGB(66, 140, 140, 213),
+  fillColor: Color.fromARGB(0, 255, 254, 254),
+  
  
   filled: true,
 
@@ -15,7 +16,7 @@ const textInputDecoration = InputDecoration(
     borderSide: BorderSide(color: Color.fromARGB(0, 15, 13, 13), width: 2),
   ),
   errorBorder: OutlineInputBorder(
-    borderSide: BorderSide(color: Color.fromARGB(255, 255, 249, 248), width: 2),
+    borderSide: BorderSide(color: Color.fromARGB(0, 105, 38, 26), width: 2),
   ),
 );
 
