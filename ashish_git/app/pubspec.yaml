@@ -136,4 +136,8 @@ flutter:
     - assets/images/userpfp.json
     - assets/images/userpfp.png
     - assets/images/dialog.json
+    - assets/images/animation3.json
+    - assets/images/malephoto.json
+    
+
 flutter_gif: any // or the latest version on Pub
