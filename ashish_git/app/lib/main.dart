@@ -8,8 +8,6 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'Pages/Login/LoginPage.dart';
 import 'package:app/SharedData/helper/helper_function.dart';
 
-
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   if (kIsWeb) {
@@ -23,25 +21,18 @@ void main() async {
     await Firebase.initializeApp();
   }
 
-    
-  
- 
   runApp(const MyApp());
 }
 
-
 class MyApp extends StatefulWidget {
-  const MyApp ({Key? key})  : super( key: key );
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-
   bool _isSignedIn = false;
-
-
 
   @override
   void initState() {
@@ -49,9 +40,7 @@ class _MyAppState extends State<MyApp> {
     getUserLoggedInStatus();
   }
 
-
-
-getUserLoggedInStatus() async {
+  getUserLoggedInStatus() async {
     await HelperFunctions.getUserLoggedInStatus().then((value) {
       if (value != null) {
         setState(() {
@@ -62,10 +51,10 @@ getUserLoggedInStatus() async {
   }
 
   @override
-  Widget build(BuildContext context ){
-    return  MaterialApp(
-      debugShowCheckedModeBanner:  false ,
-      home : _isSignedIn ?  const Welcome3() : const LoginPage(),
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: _isSignedIn ? const Welcome3() : const LoginPage(),
     );
   }
 }

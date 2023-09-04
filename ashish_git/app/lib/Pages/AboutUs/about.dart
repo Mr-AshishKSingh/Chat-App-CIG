@@ -13,11 +13,16 @@ class _MyWidgetState extends State<aboutus> {
   Widget build(BuildContext context) {
     return Container(
 
-      decoration: const BoxDecoration(
+     decoration: BoxDecoration(
           gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [Color.fromARGB(255, 0, 4, 253), Color.fromARGB(171, 221, 111, 248)])),
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromARGB(255, 72, 60, 229),
+              Color.fromARGB(255, 33, 20, 128), // Change gradient colors as needed
+            ],
+          ),
+        ),
 
 
 
@@ -56,7 +61,7 @@ class _MyWidgetState extends State<aboutus> {
                     width: 300,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Color.fromARGB(166, 17, 223, 144),
+                      color: Color.fromARGB(166, 0, 255, 0),
                     ),
                    
                     child: SingleChildScrollView(
