@@ -183,3 +183,17 @@ final ButtonStyle profilepagelogoutbutton = ElevatedButton.styleFrom(
 
 );
 
+
+
+
+final ButtonStyle fundraise = ElevatedButton.styleFrom(
+  minimumSize: const Size( 10, 40),
+  backgroundColor: Color.fromARGB(182, 251, 2, 2),
+  elevation : 0,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular( 10 ),
+  ),
+
+);
+
+

@@ -142,6 +142,15 @@ flutter:
     - assets/images/dialog.json
     - assets/images/animation3.json
     - assets/images/malephoto.json
+    - assets/images/newborn.json
+    - assets/images/child.json
+    - assets/images/boy.json
+    - assets/images/JOB.json
+    - assets/images/old.json
+    - assets/images/fund.json
+    - assets/images/alert.json
+
+  # For details regarding fonts from package dependencies,
     
 
 flutter_gif: any // or the latest version on Pub
