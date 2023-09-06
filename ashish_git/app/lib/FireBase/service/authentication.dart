@@ -21,6 +21,10 @@ class AuthService {
     }
   }
 
+
+
+
+
   // register
   Future registerUserWithEmailandPassword(
       String fullName, String email, String password) async {

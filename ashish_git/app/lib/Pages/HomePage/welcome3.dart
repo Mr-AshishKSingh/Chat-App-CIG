@@ -1,5 +1,8 @@
 import 'package:app/Pages/AboutUs/about.dart';
+import 'package:app/Pages/DietPlan/dietplan.dart';
 import 'package:app/Pages/FIndHospitals/findhospital.dart';
+import 'package:app/Pages/Funds/funds.dart';
+import 'package:app/Pages/Funds/funds0.dart';
 import 'package:app/Pages/Login/LoginPage.dart';
 import 'package:app/Pages/ChatGroups/chatgroups.dart';
 import 'package:app/Pages/FindDoctor/findyourdoctorpage.dart';
@@ -84,12 +87,6 @@ class _Welcome3State extends State<Welcome3> {
                         GoogleFonts.didactGothic(
 
                       textStyle: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),
-
-
-
-
-
-                          
                         ),
                   ),
                 ),
@@ -438,7 +435,7 @@ class _Welcome3State extends State<Welcome3> {
                                                           context,
                                                           MaterialPageRoute(
                                                               builder: (context) =>
-                                                                  FindDoctor()),
+                                                                  funds0()),
                                                         );
                                                       },
                                                     ),
@@ -539,7 +536,7 @@ class _Welcome3State extends State<Welcome3> {
                                                           context,
                                                           MaterialPageRoute(
                                                               builder: (context) =>
-                                                                  FindDoctor()),
+                                                                  dietpage()),
                                                         );
                                                       },
                                                     ),

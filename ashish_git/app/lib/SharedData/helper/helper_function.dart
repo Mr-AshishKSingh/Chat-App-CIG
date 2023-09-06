@@ -8,6 +8,10 @@ class HelperFunctions {
   static String userLoggedInKey = "LOGGEDINKEY";
   static String userNameKey = "USERNAMEKEY";
   static String userEmailKey = "USEREMAILKEY";
+  static String userVillageKey = "USERVILLAGEKEY";
+  
+  static String usersubmissionKey = "USERSUBMISSIONKEY";
+  
 
 
   //saving data
@@ -30,12 +34,25 @@ class HelperFunctions {
     return await sf.setString(userEmailKey, userEmail);
   }
 
+  static Future<bool> saveUserFundSubmission(String village) async {
+    SharedPreferences sf = await SharedPreferences.getInstance();
+    return await sf.setString(usersubmissionKey, village);
+  }
+
+
 
   // retrieving data
 
    static Future<bool?> getUserLoggedInStatus() async {
     SharedPreferences sf = await SharedPreferences.getInstance();
     return sf.getBool(userLoggedInKey);
+  }
+
+
+// funds
+  static Future<bool?> getsubmissionstatus() async {
+    SharedPreferences sf = await SharedPreferences.getInstance();
+    return sf.getBool(usersubmissionKey);
   }
 
   static Future<String?> getUserEmailFromSF() async {

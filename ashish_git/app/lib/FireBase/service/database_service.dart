@@ -9,6 +9,8 @@ class DatabaseService {
       FirebaseFirestore.instance.collection("users");
   final CollectionReference groupCollection =
       FirebaseFirestore.instance.collection("groups");
+  final CollectionReference datacollection = FirebaseFirestore.instance.collection("data");
+  final CollectionReference fundcollection = FirebaseFirestore.instance.collection("funds");
 
   // saving the userdata
   Future savingUserData(String fullName, String email) async {
@@ -18,6 +20,10 @@ class DatabaseService {
       "groups": [],
       "profilePic": "",
       "uid": uid,
+      "funds" : [],
+      
+      
+      
     });
   }
 
@@ -32,6 +38,47 @@ class DatabaseService {
   getUserGroups() async {
     return userCollection.doc(uid).snapshots();
   }
+
+  //updating funds details of users
+
+
+
+  Future updatefunddetails(String userName, String id,String village, String district, String state, String pincode, String address , String submission , String mobile) async {
+  
+
+
+
+     DocumentReference groupDocumentReference = await fundcollection.add({
+     "submission": submission,
+      "raiser": "${id}_$userName",
+
+      "village": village,
+      "district": district,
+      "state": state,
+      "pincode": pincode,
+      "address": address,
+      "mobile": mobile,
+    });
+
+
+
+    DocumentReference userDocumentReference = userCollection.doc(uid);
+    return await userDocumentReference.update({
+      "funds":
+          FieldValue.arrayUnion(["${groupDocumentReference.id}_$userName"])
+    });
+
+
+    
+  }
+
+
+
+
+
+  
+
+
 
   // creating a group
   Future createGroup(String userName, String id, String groupName) async {
