@@ -21,11 +21,34 @@ class DatabaseService {
       "profilePic": "",
       "uid": uid,
       "funds" : [],
+      "fundsubmission" : false,
+
       
       
       
     });
   }
+
+  //getting fundsubmission status
+
+ 
+
+    Future getfundsubmissionstatus(bool submission) async {
+    
+        await userCollection.where("fundsubmission", isEqualTo: submission).get();
+    return submission;
+  }
+
+
+  //setting fund submission status to true on databas e
+  Future updatefundsubmissionstatus(bool submission) async {
+    DocumentReference userDocumentReference = userCollection.doc(uid);
+    return await userDocumentReference.update({
+      "fundsubmission": submission,
+    });
+  }
+
+
 
   // getting user data
   Future gettingUserData(String email) async {
@@ -43,12 +66,12 @@ class DatabaseService {
 
 
 
-  Future updatefunddetails(String userName, String id,String village, String district, String state, String pincode, String address , String submission , String mobile) async {
+  Future updatefunddetails(String userName, String id,String village, String district, String state, String pincode, String address , bool submission , String mobile , String purpose) async {
   
 
 
 
-     DocumentReference groupDocumentReference = await fundcollection.add({
+     DocumentReference fundDocumentReference = await fundcollection.add({
      "submission": submission,
       "raiser": "${id}_$userName",
 
@@ -58,6 +81,7 @@ class DatabaseService {
       "pincode": pincode,
       "address": address,
       "mobile": mobile,
+      "purpose": purpose,
     });
 
 
@@ -65,19 +89,12 @@ class DatabaseService {
     DocumentReference userDocumentReference = userCollection.doc(uid);
     return await userDocumentReference.update({
       "funds":
-          FieldValue.arrayUnion(["${groupDocumentReference.id}_$userName"])
+          FieldValue.arrayUnion(["${fundDocumentReference.id}_$userName"])
     });
 
 
     
   }
-
-
-
-
-
-  
-
 
 
   // creating a group
@@ -117,6 +134,15 @@ class DatabaseService {
     DocumentReference d = groupCollection.doc(groupId);
     DocumentSnapshot documentSnapshot = await d.get();
     return documentSnapshot['admin'];
+  }
+
+
+  //get submission status
+
+   Future getFundStatus(String uid) async {
+    DocumentReference d = userCollection.doc(uid);
+    DocumentSnapshot documentSnapshot = await d.get();
+    return documentSnapshot['fundsubmission'];
   }
 
   // get group members
@@ -180,4 +206,6 @@ class DatabaseService {
       "recentMessageTime": chatMessageData['time'].toString(),
     });
   }
+
+  getstatus() {}
 }

@@ -18,6 +18,7 @@ class fundspageState extends State<fundspage>{
   String  pincode = "";
   String  address = "";
   bool checked  = false;
+  
 
 
   @override 

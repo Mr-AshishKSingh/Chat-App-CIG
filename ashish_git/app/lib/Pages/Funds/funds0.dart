@@ -1,10 +1,11 @@
-
-
 import 'package:app/FireBase/service/authentication.dart';
+import 'package:app/FireBase/service/database_service.dart';
 import 'package:app/Pages/Funds/aftersubmit.dart';
 import 'package:app/Pages/Funds/funds.dart';
 import 'package:app/Pages/Funds/funds2.dart';
 import 'package:app/SharedData/helper/helper_function.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class funds0 extends StatefulWidget {
@@ -15,33 +16,39 @@ class funds0 extends StatefulWidget {
 }
 
 class _funds0State extends State<funds0> {
-  AuthService authService = AuthService();
-
-  bool applied = false;
   
+  AuthService authService = AuthService();
+  final String user = FirebaseAuth.instance.currentUser!.uid;
+
+  var submission = true;
+  bool status = true;
 
   @override
   void initState() {
     super.initState();
-    getsubmissionstatus();
+    getstatus();
+    print(  submission);
+
   }
 
+  getstatus(){
 
-   getsubmissionstatus() async {
-    await HelperFunctions.getsubmissionstatus().then((value) {
-      if (value != null) {
-        setState(() {
-          applied = value;
-        });
-      }
+    DatabaseService().getFundStatus(user).then((val) {
+      setState(() {
+        submission = val;
+      });
     });
+   
   }
 
-   @override
+
+  
+
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home:  applied  ? const aftersubmit() : const fundspage(),
+      home: submission ? const aftersubmit() : const fundspage(),
     );
   }
 }
