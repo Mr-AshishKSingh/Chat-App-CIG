@@ -149,6 +149,7 @@ flutter:
     - assets/images/old.json
     - assets/images/fund.json
     - assets/images/alert.json
+    - assets/images/ok.json
 
   # For details regarding fonts from package dependencies,
     

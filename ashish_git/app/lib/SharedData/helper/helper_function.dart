@@ -34,9 +34,9 @@ class HelperFunctions {
     return await sf.setString(userEmailKey, userEmail);
   }
 
-  static Future<bool> saveUserFundSubmission(String village) async {
+  static Future<bool> saveUserFundSubmission(bool submission) async {
     SharedPreferences sf = await SharedPreferences.getInstance();
-    return await sf.setString(usersubmissionKey, village);
+    return await sf.setBool(usersubmissionKey, submission);
   }
 
 
@@ -46,6 +46,13 @@ class HelperFunctions {
    static Future<bool?> getUserLoggedInStatus() async {
     SharedPreferences sf = await SharedPreferences.getInstance();
     return sf.getBool(userLoggedInKey);
+  }
+
+
+  //fund submission
+  static Future<bool?> getuserfunfsubmissionstatus() async {
+    SharedPreferences sf = await SharedPreferences.getInstance();
+    return sf.getBool(usersubmissionKey);
   }
 
 

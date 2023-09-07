@@ -1,5 +1,7 @@
 import 'package:app/FireBase/service/authentication.dart';
 import 'package:app/FireBase/service/database_service.dart';
+import 'package:app/Pages/Funds/aftersubmit.dart';
+import 'package:app/Pages/HomePage/welcome3.dart';
 import 'package:app/SharedData/button.dart';
 import 'package:app/SharedData/helper/helper_function.dart';
 import 'package:app/widgets/widgets.dart';
@@ -27,8 +29,9 @@ class _Funds2State extends State<Funds2> {
   String address = "";
    String userName = "";
   String email = "";
-  String  submission =  "false";
+  bool  submission =  false;
   String mobile = "";
+  String purpose = "";
 
   
 
@@ -67,6 +70,29 @@ class _Funds2State extends State<Funds2> {
                 ),
               ),
               SizedBox(height: 50),
+
+
+
+              Container(
+                width: 150,
+                height: 50,
+                decoration : BoxDecoration(
+                  color: Color.fromARGB(244, 0, 0, 20),
+                  borderRadius: BorderRadius.all(Radius.circular(10))),
+                child: Center(
+                  child: Text(
+                    "Location Related",
+                textAlign: TextAlign.center
+                    ,
+                    style: GoogleFonts.oswald(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      
+                    ),
+                  ),
+                )
+              ),
 
               Padding(
                         padding: const EdgeInsets.all(15.0),
@@ -244,6 +270,62 @@ class _Funds2State extends State<Funds2> {
                           ),
                         ),
                       ),
+
+                      
+              Container(
+                width: 150,
+                height: 50,
+                decoration : BoxDecoration(
+                  color: Color.fromARGB(244, 0, 0, 20),
+                  borderRadius: BorderRadius.all(Radius.circular(10))),
+                child: Center(
+                  child: Text(
+                    "Why you need it ",
+                textAlign: TextAlign.center
+                    ,
+                    style: GoogleFonts.oswald(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      
+                    ),
+                  ),
+                )
+              ),
+
+
+              Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Container(
+                          decoration: BoxDecoration (
+                            color: Color.fromARGB(216, 251, 251, 252),
+                            borderRadius: BorderRadius.all(Radius.circular(10))),
+                          child: TextFormField(
+                            
+                            decoration: textInputDecoration.copyWith(
+                                hintText: 'Purpose',
+                                prefixIcon: Icon(Icons.text_fields,
+                                    color: Color.fromARGB(255, 31, 34, 254))),
+                            validator: (val) {
+                              if (val!.length < 6) {
+                                return "Password must be at least 6 characters";
+                              } else {
+                                return null;
+                              }
+                            },
+                            onChanged: (val) {
+                              setState(() {
+                                purpose = val;
+                                //print(password);
+                              });
+                            },
+                          ),
+                        ),
+                      ),
+
+
+
+                      
              
               
            
@@ -251,16 +333,33 @@ class _Funds2State extends State<Funds2> {
               ElevatedButton(
                 style: fundraise,
                   onPressed: () async {
-                     await HelperFunctions.saveUserLoggedInStatus(true);
 
-                    setState(() {
-                      submission = "true";
-                    });
+                    //call setting function 
+                    
+                     
+
+                    
+                  //update the fund submission status to database
+                  Settings() async {
+    //setting fund submission status to true on databas e
+    await DatabaseService(uid: FirebaseAuth.instance.currentUser!.uid)
+        .updatefundsubmissionstatus(true);
+  }
+
+  Settings();
+
+
                      DatabaseService(
                               uid: FirebaseAuth.instance.currentUser!.uid)
                           .updatefunddetails(userName,
-                              FirebaseAuth.instance.currentUser!.uid, village , district, state, pincode, address , submission , mobile)
+                              FirebaseAuth.instance.currentUser!.uid, village , district, state, pincode, address , submission , mobile , purpose)
                         ;
+
+
+                          nextScreenReplace(context, const aftersubmit());
+
+
+
                   },
                                    
                   child:  Text("RAISE IT" , style: 
