@@ -1,5 +1,5 @@
 //import 'package:app/pages/chat_page.dart';
-import 'package:app/pages/ChatGroups/chat_page.dart';
+import 'package:app/Pages/ChatGroups/chat_page.dart';
 import 'package:app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,7 +26,7 @@ class _GroupTileState extends State<GroupTile> {
     return GestureDetector(
       onTap: () {
         nextScreen(
-           context,
+            context,
             ChatPage(
               groupId: widget.groupId,
               groupName: widget.groupName,
@@ -35,7 +35,6 @@ class _GroupTileState extends State<GroupTile> {
       },
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 7, horizontal: 10),
-        
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: Color.fromARGB(166, 223, 211, 211),
@@ -51,15 +50,12 @@ class _GroupTileState extends State<GroupTile> {
               width: 200,
             ),
           ),
-
-          title: Text(
-            "Group Name -  ${widget.groupName} " ,
-            style: GoogleFonts.roboto(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 255, 255, 255),
-            )
-          ),
+          title: Text("Group Name -  ${widget.groupName} ",
+              style: GoogleFonts.roboto(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 255, 255, 255),
+              )),
           subtitle: Center(
             child: Text(
               "Join the conversation as ${widget.userName}",

@@ -1,4 +1,4 @@
-
+import 'package:app/Pages/ChatGroups/availgroups.dart';
 import 'package:app/Pages/Login/LoginPage.dart';
 import 'package:app/Pages/Profile/profilepage.dart';
 import 'package:app/Pages/ChatGroups/search_page.dart';
@@ -24,17 +24,15 @@ class chatpageState extends State<chatpage> {
   String userName = "";
   String email = "";
   AuthService authService = AuthService();
-  Stream? groups ;
+  Stream? groups;
   bool _isLoading = false;
-  String groupName = "";  
-
+  String groupName = "";
 
   @override
   void initState() {
     super.initState();
     gettinUserData();
   }
-
 
   //string manipulatioon
 
@@ -45,8 +43,6 @@ class chatpageState extends State<chatpage> {
   String getName(String res) {
     return res.substring(res.indexOf("_") + 1, res.length);
   }
-
-
 
   gettinUserData() async {
     await HelperFunctions.getUserEmailFromSF().then((value) {
@@ -61,7 +57,7 @@ class chatpageState extends State<chatpage> {
     });
 
     //list of snapshots
-     await DatabaseService(uid: FirebaseAuth.instance.currentUser!.uid)
+    await DatabaseService(uid: FirebaseAuth.instance.currentUser!.uid)
         .getUserGroups()
         .then((snapshot) {
       setState(() {
@@ -69,167 +65,200 @@ class chatpageState extends State<chatpage> {
       });
     });
   }
-  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton.extended(
+              heroTag: null,
+              onPressed: () {
+                // nextScreen(context, const availgroups());
+              },
+              backgroundColor: Color.fromARGB(255, 255, 110, 110),
+              focusColor: Color.fromARGB(0, 231, 5, 5),
+              elevation: 0,
+              icon: Icon(
+                Icons.not_interested,
+                color: const Color.fromARGB(255, 0, 0, 0),
+              ),
+              label: Text(
+                "All Groups List",
+                style: TextStyle(
+                  color: const Color.fromARGB(255, 0, 0, 0),
+                ),
+              )),
+          const SizedBox(
+            width: 10,
+          ),
+          FloatingActionButton(
+            heroTag: null,
+            onPressed: () {
+              nextScreen(context, const SearchPage());
+            },
+            backgroundColor: Color.fromARGB(255, 255, 255, 255),
+            focusColor: Color.fromARGB(0, 231, 5, 5),
+            elevation: 0,
+            child: Icon(
+              Icons.search_sharp,
+              color: const Color.fromARGB(255, 0, 0, 0),
+            ),
+          ),
+          const SizedBox(
+            width: 10,
+          ),
+          FloatingActionButton(
+            heroTag: null,
+            onPressed: () {
+              popUpDialog(context);
+            },
+            backgroundColor: Color.fromARGB(255, 254, 254, 254),
+            focusColor: Color.fromARGB(0, 255, 255, 255),
+            elevation: 0,
+            child: Icon(
+              Icons.add,
+              color: const Color.fromARGB(255, 0, 0, 0),
+            ),
+          ),
+        ],
+      ),
       backgroundColor: Color.fromARGB(255, 231, 226, 255),
-      
       appBar: AppBar(
         actions: [
           IconButton(
             onPressed: () {
-
-
               nextScreen(context, const SearchPage());
             },
             icon: const Icon(Icons.search_sharp),
           ),
-
-         
         ],
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 72, 60, 229),
         title: Text('Chat Groups'),
       ),
       drawer: Drawer(
-          backgroundColor: Color.fromARGB(255, 83, 73, 228),
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: [
-              Lottie.asset(
-                "assets/images/profilephotonew.json",
-                width: 100,
-                height: 300,
+        backgroundColor: Color.fromARGB(255, 83, 73, 228),
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            Lottie.asset(
+              "assets/images/profilephotonew.json",
+              width: 100,
+              height: 300,
+            ),
+            Center(
+              child: Text(
+                userName,
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
               ),
-              Center(
-                child: Text(
-                  userName,
-                  style:
-                      TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-                ),
+            ),
+            Center(
+              child: Text(
+                email,
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
               ),
-
-
-              Center(
-                child: Text(
-                  email,
-                  style:
-                      TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-                ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 10,
               ),
-
-              const SizedBox(
-                height: 10,
+              child: ElevatedButton(
+                style: drawerprofile,
+                child: Text('Profile'),
+                onPressed: () {
+                  nextScreenReplace(context, const ProfilePage());
+                },
               ),
-
-
-
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                ),
-                child: ElevatedButton(
-                  style: drawerprofile,
-                  child: Text('Profile'),
-                  onPressed: () {
-                    nextScreenReplace(context, const ProfilePage());
-                  },
-                ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 10,
               ),
-
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                ),
-                child: ElevatedButton(
-                  style: drawerprofile,
-                  child: Text('Groups'),
-                  onPressed: () {
-                    nextScreenReplace(context, const chatpage());
-                  },
-                ),
+              child: ElevatedButton(
+                style: drawerprofile,
+                child: Text('Groups'),
+                onPressed: () {
+                  nextScreenReplace(context, const chatpage());
+                },
               ),
-
-
-              
-
-
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                ),
-                child: ElevatedButton(
-                  style: drawerprofile,
-                  child: Text('Contact Us'),
-                  onPressed: () {
-                    nextScreenReplace(context, const chatpage());
-                  },
-                ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 10,
               ),
-
-
-              
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                ),
-                child: ElevatedButton(
-                  style: drawerprofile,
-                  child: Text('About '),
-                  onPressed: () {
-                    nextScreenReplace(context, const chatpage());
-                  },
-                ),
+              child: ElevatedButton(
+                style: drawerprofile,
+                child: Text('Contact Us'),
+                onPressed: () {
+                  nextScreenReplace(context, const chatpage());
+                },
               ),
-
-              
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 70,
-                ),
-                child: ElevatedButton(
-                  style: drawerlogout,
-                  child: Text('Logout'),
-                  onPressed: () {
-                    authService.signOut().whenComplete(() {
-                      nextScreenReplace(context, const LoginPage());
-                    });
-                  },
-                ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 10,
               ),
-            ],
-          ),
+              child: ElevatedButton(
+                style: drawerprofile,
+                child: Text('About '),
+                onPressed: () {
+                  nextScreenReplace(context, const chatpage());
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 70,
+              ),
+              child: ElevatedButton(
+                style: drawerlogout,
+                child: Text('Logout'),
+                onPressed: () {
+                  authService.signOut().whenComplete(() {
+                    nextScreenReplace(context, const LoginPage());
+                  });
+                },
+              ),
+            ),
+          ],
         ),
-      body:
-    
-       groupList(),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        popUpDialog(context);
-      },
-      backgroundColor: Color.fromARGB(0, 255, 0, 0),
-      focusColor: Color.fromARGB(0, 255, 255, 255),
-       elevation: 0, child:  Lottie.asset("assets/images/addbutton2.json" , 
-      ),),
-      
+      ),
+      body: groupList(),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     popUpDialog(context);
+      //   },
+      //   backgroundColor: Color.fromARGB(0, 255, 0, 0),
+      //   focusColor: Color.fromARGB(0, 255, 255, 255),
+      //   elevation: 0,
+      //   child: Lottie.asset(
+      //     "assets/images/addbutton2.json",
+      //   ),
+      // ),
     );
   }
 
- popUpDialog(BuildContext context) {
+  popUpDialog(BuildContext context) {
     showDialog(
         barrierDismissible: false,
         context: context,
         builder: (context) {
           return StatefulBuilder(builder: ((context, setState) {
             return AlertDialog(
-              shape: 
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
               backgroundColor: Color.fromARGB(255, 85, 74, 240),
-              title:  Text(
+              title: Text(
                 "Create a group",
                 textAlign: TextAlign.left,
-                style : GoogleFonts.firaSans( 
+                style: GoogleFonts.firaSans(
                   textStyle: TextStyle(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontSize: 20,
@@ -245,36 +274,32 @@ class chatpageState extends State<chatpage> {
                           child: CircularProgressIndicator(
                               color: Theme.of(context).primaryColor),
                         )
-                        
-                      : 
-                      
-                      Lottie.asset("assets/images/dialog.json"),
-                      
-                      Container(
-                        decoration:
-                            BoxDecoration(color: Color.fromARGB(209, 236, 236, 240),borderRadius: BorderRadius.circular(20)),
-                        child: TextField(
-                            onChanged: (val) {
-                              setState(() {
-                                groupName = val;
-                              });
-                            },
-                            style: const TextStyle(color: Colors.white),
-                            decoration: InputDecoration(
-                                enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: Theme.of(context).primaryColor),
-                                    borderRadius: BorderRadius.circular(20)),
-                                errorBorder: OutlineInputBorder(
-                                    borderSide:
-                                        const BorderSide(color: Colors.red),
-                                    borderRadius: BorderRadius.circular(20)),
-                                focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: Theme.of(context).primaryColor),
-                                    borderRadius: BorderRadius.circular(20))),
-                          ),
-                      ),
+                      : Lottie.asset("assets/images/dialog.json"),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Color.fromARGB(209, 236, 236, 240),
+                        borderRadius: BorderRadius.circular(20)),
+                    child: TextField(
+                      onChanged: (val) {
+                        setState(() {
+                          groupName = val;
+                        });
+                      },
+                      style: const TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Theme.of(context).primaryColor),
+                              borderRadius: BorderRadius.circular(20)),
+                          errorBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(color: Colors.red),
+                              borderRadius: BorderRadius.circular(20)),
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Theme.of(context).primaryColor),
+                              borderRadius: BorderRadius.circular(20))),
+                    ),
+                  ),
                 ],
               ),
               actions: [
@@ -282,7 +307,7 @@ class chatpageState extends State<chatpage> {
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                 style :buttonPrimary,
+                  style: buttonPrimary,
                   child: const Text("CANCEL"),
                 ),
                 ElevatedButton(
@@ -312,8 +337,7 @@ class chatpageState extends State<chatpage> {
         });
   }
 
-
-   groupList() {
+  groupList() {
     return StreamBuilder(
       stream: groups,
       builder: (context, AsyncSnapshot snapshot) {
@@ -328,17 +352,20 @@ class chatpageState extends State<chatpage> {
                     end: Alignment.bottomCenter,
                     colors: [
                       Color.fromARGB(255, 72, 60, 229),
-                      Color.fromARGB(255, 33, 20, 128), // Change gradient colors as needed
+                      Color.fromARGB(
+                          255, 33, 20, 128), // Change gradient colors as needed
                     ],
-                  ),),
+                  ),
+                ),
                 child: ListView.builder(
                   itemCount: snapshot.data['groups'].length,
                   itemBuilder: (context, index) {
-                    
-                    int reverseIndex = snapshot.data['groups'].length - index - 1;
+                    int reverseIndex =
+                        snapshot.data['groups'].length - index - 1;
                     return GroupTile(
                         groupId: getId(snapshot.data['groups'][reverseIndex]),
-                        groupName: getName(snapshot.data['groups'][reverseIndex]),
+                        groupName:
+                            getName(snapshot.data['groups'][reverseIndex]),
                         userName: snapshot.data['fullName']);
                   },
                 ),
@@ -352,28 +379,27 @@ class chatpageState extends State<chatpage> {
         } else {
           return Center(
             child: CircularProgressIndicator(
-                color: Color.fromARGB(255, 229, 16, 16),),
+              color: Color.fromARGB(255, 229, 16, 16),
+            ),
           );
         }
       },
     );
   }
- 
- 
 
-
-noGroupWidget() {
+  noGroupWidget() {
     return Container(
-   decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color.fromARGB(255, 72, 60, 229),
-              Color.fromARGB(255, 33, 20, 128), // Change gradient colors as needed
-            ],
-          ),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Color.fromARGB(255, 72, 60, 229),
+            Color.fromARGB(
+                255, 33, 20, 128), // Change gradient colors as needed
+          ],
         ),
+      ),
       padding: const EdgeInsets.symmetric(horizontal: 25),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -388,10 +414,10 @@ noGroupWidget() {
           const SizedBox(
             height: 20,
           ),
-           Text(
+          Text(
             "You've not joined any groups, tap on the add icon to create a group or also search from top search button.",
             textAlign: TextAlign.center,
-            style : GoogleFonts.aBeeZee(
+            style: GoogleFonts.aBeeZee(
               textStyle: TextStyle(
                 color: Color.fromARGB(255, 255, 255, 255),
                 fontSize: 15,
@@ -403,9 +429,4 @@ noGroupWidget() {
       ),
     );
   }
-
-
-  }
-  
-
-  
+}

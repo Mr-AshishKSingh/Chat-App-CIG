@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:app/FireBase/service/database_service.dart';
-import 'package:app/pages/ChatGroups/group_info.dart';
+import 'package:app/Pages/ChatGroups/group_info.dart';
 import 'package:app/widgets/message_tile.dart';
 import 'package:app/widgets/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ChatPage extends StatefulWidget {
   final String groupId;
@@ -93,7 +94,8 @@ class _ChatPageState extends State<ChatPage> {
               alignment: Alignment.bottomCenter,
               width: MediaQuery.of(context).size.width,
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
                 width: MediaQuery.of(context).size.width,
                 color: Color.fromARGB(0, 146, 140, 236),
                 child: Row(children: [
@@ -173,11 +175,10 @@ class _ChatPageState extends State<ChatPage> {
                 itemCount: snapshot.data.docs.length,
                 itemBuilder: (context, index) {
                   return MessageTile(
-                  
                     message: snapshot.data.docs[index]['message'],
                     sender: snapshot.data.docs[index]['sender'],
-                    sentByMe: widget.userName ==
-                        snapshot.data.docs[index]['sender'],
+                    sentByMe:
+                        widget.userName == snapshot.data.docs[index]['sender'],
                   );
                 },
               )
