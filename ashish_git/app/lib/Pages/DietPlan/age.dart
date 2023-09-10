@@ -29,7 +29,6 @@ class ageState extends State<age> {
 
       borderRadius: BorderRadius.circular(20),
 
-
       border: Border.all(
         color: Color.fromARGB(0, 153, 156, 159),
         width: 2,
@@ -40,56 +39,40 @@ class ageState extends State<age> {
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: Color.fromARGB(255, 74, 245, 7),
         onPressed: () {
-
           print("Submit age Selected ");
-                      if (isSelect == 1) {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => age()));
-                      } else if (isSelect == 2) {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => age()));
-                      } else if (isSelect == 3) {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => age()));
-                      } else if (isSelect == 4) {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => age()));
-                      } else if (isSelect == 5) {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => age()));
-                      }
-
-
-
+          if (isSelect == 1) {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => age()));
+          } else if (isSelect == 2) {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => age()));
+          } else if (isSelect == 3) {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => age()));
+          } else if (isSelect == 4) {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => age()));
+          } else if (isSelect == 5) {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => age()));
+          }
         },
         icon: const Icon(Icons.next_plan),
-        label:  Text('Continue' , 
-        style: GoogleFonts.oswald(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                        color: Color.fromARGB(255, 255, 255, 255),
+        label: Text(
+          'Continue',
+          style: GoogleFonts.oswald(
+            fontSize: 20,
+            fontWeight: FontWeight.w700,
+            color: Color.fromARGB(255, 255, 255, 255),
+          ),
         ),
-
-
-
-
       ),
-      
-      
-      
-      
-      ),
-
-
-
-
-
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
         title: Text("DietPlan"),
         //center
 
-        centerTitle: true   ,
+        centerTitle: true,
         backgroundColor: Colors.blue,
       ),
       body: Center(
@@ -106,9 +89,6 @@ class ageState extends State<age> {
               ),
             ),
             child: Column(children: [
-              
-
-              
               Container(
                 padding: const EdgeInsets.only(top: 60.0),
                 child: Center(
@@ -143,8 +123,8 @@ class ageState extends State<age> {
                         child: SingleChildScrollView(
                           child: Column(
                             children: [
-                        
-                              Lottie.asset('assets/images/newborn.json',height: 150,width: 150),
+                              Lottie.asset('assets/images/newborn.json',
+                                  height: 150, width: 150),
                               Container(
                                 width: 150,
                                 height: 30,
@@ -153,14 +133,13 @@ class ageState extends State<age> {
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Center(
-                                  child: Text(
-                                    "New born",
-                                    style:GoogleFonts.oswald(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                      color: const Color.fromARGB(255, 252, 246, 246),
-                                    )
-                                  ),
+                                  child: Text("New born",
+                                      style: GoogleFonts.oswald(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: const Color.fromARGB(
+                                            255, 252, 246, 246),
+                                      )),
                                 ),
                               ),
                             ],
@@ -171,10 +150,7 @@ class ageState extends State<age> {
                 height: 40,
               ),
 
-
-
-
-               InkWell(
+              InkWell(
                   onTap: () {
                     setState(() {
                       isSelect = 2;
@@ -192,8 +168,8 @@ class ageState extends State<age> {
                         child: SingleChildScrollView(
                           child: Column(
                             children: [
-                        
-                              Lottie.asset('assets/images/child.json',height: 150,width: 150),
+                              Lottie.asset('assets/images/child.json',
+                                  height: 150, width: 150),
                               Container(
                                 width: 150,
                                 height: 35,
@@ -202,16 +178,14 @@ class ageState extends State<age> {
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Center(
-                                  child: Text(
-                                    "1 - 12 Years",
-                                    textAlign: TextAlign.center,
-                                    style:GoogleFonts.oswald
-                                    (
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                      color: const Color.fromARGB(255, 252, 246, 246),
-                                    )
-                                  ),
+                                  child: Text("1 - 12 Years",
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.oswald(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: const Color.fromARGB(
+                                            255, 252, 246, 246),
+                                      )),
                                 ),
                               ),
                             ],
@@ -219,7 +193,9 @@ class ageState extends State<age> {
                         ),
                       ))),
 
-              SizedBox( height: 40, ),
+              SizedBox(
+                height: 40,
+              ),
               // InkWell(
               //     onTap: () {
               //       setState(() {
@@ -245,13 +221,8 @@ class ageState extends State<age> {
               //             ),
               //           ),
               //         ))),
-             
 
-
-
-
-
-               InkWell(
+              InkWell(
                   onTap: () {
                     setState(() {
                       isSelect = 3;
@@ -269,8 +240,8 @@ class ageState extends State<age> {
                         child: SingleChildScrollView(
                           child: Column(
                             children: [
-                        
-                              Lottie.asset('assets/images/boy.json',height: 150,width: 150),
+                              Lottie.asset('assets/images/boy.json',
+                                  height: 150, width: 150),
                               Container(
                                 width: 150,
                                 height: 35,
@@ -279,16 +250,14 @@ class ageState extends State<age> {
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Center(
-                                  child: Text(
-                                    "13- 24 Years",
-                                    textAlign: TextAlign.center,
-                                    style:GoogleFonts.oswald
-                                    (
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                      color: const Color.fromARGB(255, 252, 246, 246),
-                                    )
-                                  ),
+                                  child: Text("13- 24 Years",
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.oswald(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: const Color.fromARGB(
+                                            255, 252, 246, 246),
+                                      )),
                                 ),
                               ),
                             ],
@@ -296,15 +265,13 @@ class ageState extends State<age> {
                         ),
                       ))),
 
-
-
-
-
 //---------------------
 
-SizedBox( height: 40, ),
+              SizedBox(
+                height: 40,
+              ),
 
-InkWell(
+              InkWell(
                   onTap: () {
                     setState(() {
                       isSelect = 4;
@@ -322,8 +289,8 @@ InkWell(
                         child: SingleChildScrollView(
                           child: Column(
                             children: [
-                        
-                              Lottie.asset('assets/images/JOB.json',height: 150,width: 150),
+                              Lottie.asset('assets/images/JOB.json',
+                                  height: 150, width: 150),
                               Container(
                                 width: 150,
                                 height: 35,
@@ -332,24 +299,21 @@ InkWell(
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Center(
-                                  child: Text(
-                                    "25 - 50 Years",
-                                    textAlign: TextAlign.center,
-                                    style:GoogleFonts.oswald
-                                    (
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                      color: const Color.fromARGB(255, 252, 246, 246),
-                                    )
-                                  ),
+                                  child: Text("25 - 50 Years",
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.oswald(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: const Color.fromARGB(
+                                            255, 252, 246, 246),
+                                      )),
                                 ),
                               ),
                             ],
                           ),
                         ),
                       ))),
-              
-             
+
               SizedBox(
                 height: 40,
               ),
@@ -372,8 +336,8 @@ InkWell(
                         child: SingleChildScrollView(
                           child: Column(
                             children: [
-                        
-                              Lottie.asset('assets/images/old.json',height: 150,width: 150),
+                              Lottie.asset('assets/images/old.json',
+                                  height: 150, width: 150),
                               Container(
                                 width: 150,
                                 height: 35,
@@ -382,27 +346,24 @@ InkWell(
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Center(
-                                  child: Text(
-                                    "50+ Years",
-                                    textAlign: TextAlign.center,
-                                    style:GoogleFonts.oswald
-                                    (
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                      color: const Color.fromARGB(255, 252, 246, 246),
-                                    )
-                                  ),
+                                  child: Text("50+ Years",
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.oswald(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: const Color.fromARGB(
+                                            255, 252, 246, 246),
+                                      )),
                                 ),
                               ),
                             ],
                           ),
                         ),
                       ))),
-              
+
               SizedBox(
                 height: 40,
               ),
-              
             ]),
           ),
         ),

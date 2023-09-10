@@ -332,16 +332,14 @@ class _Welcome3State extends State<Welcome3> {
                                                   ),
                                                 ),
                                               ),
-
-
                                               SizedBox(width: 10),
-
                                               Center(
                                                 child: Container(
                                                   width: 170,
                                                   height: 270,
                                                   decoration: BoxDecoration(
-                                                    color: Color.fromRGBO(245, 8, 178, 1),
+                                                    color: Color.fromRGBO(
+                                                        245, 8, 178, 1),
                                                     border: Border.all(
                                                       color: Color.fromARGB(
                                                           2, 255, 204, 1),
@@ -445,7 +443,6 @@ class _Welcome3State extends State<Welcome3> {
                                                 ),
                                               ),
                                               SizedBox(width: 10),
-                                             
                                             ],
                                           ),
                                         ),
@@ -479,50 +476,52 @@ class _Welcome3State extends State<Welcome3> {
                                                               const EdgeInsets
                                                                   .all(8.0),
                                                           child: Container(
-                                                          height: 50,
-                                                          width: 130,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromRGBO(
-                                                                    6,
-                                                                    1,
-                                                                    1,
-                                                                    0.722),
-                                                            border: Border.all(
+                                                            height: 50,
+                                                            width: 130,
+                                                            decoration:
+                                                                BoxDecoration(
                                                               color: Color
-                                                                  .fromARGB(
-                                                                      2,
-                                                                      255,
-                                                                      204,
-                                                                      1),
-                                                            ),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        45),
-                                                          ),
-                                                          child: Center(
-                                                            child: Text(
-                                                              "Find Hospital",
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .center,
-                                                              style: TextStyle(
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                                fontSize: 15,
+                                                                  .fromRGBO(
+                                                                      6,
+                                                                      1,
+                                                                      1,
+                                                                      0.722),
+                                                              border:
+                                                                  Border.all(
                                                                 color: Color
                                                                     .fromARGB(
+                                                                        2,
                                                                         255,
-                                                                        254,
-                                                                        253,
-                                                                        253),
+                                                                        204,
+                                                                        1),
+                                                              ),
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          45),
+                                                            ),
+                                                            child: Center(
+                                                              child: Text(
+                                                                "Find Hospital",
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .center,
+                                                                style:
+                                                                    TextStyle(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  fontSize: 15,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          254,
+                                                                          253,
+                                                                          253),
+                                                                ),
                                                               ),
                                                             ),
                                                           ),
-                                                        ),
                                                         ),
                                                         Lottie.asset(
                                                           "assets/images/findhospital.json",
@@ -569,50 +568,52 @@ class _Welcome3State extends State<Welcome3> {
                                                               const EdgeInsets
                                                                   .all(8.0),
                                                           child: Container(
-                                                          height: 50,
-                                                          width: 130,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromRGBO(
-                                                                    6,
-                                                                    1,
-                                                                    1,
-                                                                    0.722),
-                                                            border: Border.all(
+                                                            height: 50,
+                                                            width: 130,
+                                                            decoration:
+                                                                BoxDecoration(
                                                               color: Color
-                                                                  .fromARGB(
-                                                                      2,
-                                                                      255,
-                                                                      204,
-                                                                      1),
-                                                            ),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        45),
-                                                          ),
-                                                          child: Center(
-                                                            child: Text(
-                                                              "Get Funds",
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .center,
-                                                              style: TextStyle(
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                                fontSize: 15,
+                                                                  .fromRGBO(
+                                                                      6,
+                                                                      1,
+                                                                      1,
+                                                                      0.722),
+                                                              border:
+                                                                  Border.all(
                                                                 color: Color
                                                                     .fromARGB(
+                                                                        2,
                                                                         255,
-                                                                        254,
-                                                                        253,
-                                                                        253),
+                                                                        204,
+                                                                        1),
+                                                              ),
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          45),
+                                                            ),
+                                                            child: Center(
+                                                              child: Text(
+                                                                "Get Funds",
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .center,
+                                                                style:
+                                                                    TextStyle(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  fontSize: 15,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          254,
+                                                                          253,
+                                                                          253),
+                                                                ),
                                                               ),
                                                             ),
                                                           ),
-                                                        ),
                                                         ),
                                                         Lottie.asset(
                                                           "assets/images/money.json",
@@ -666,55 +667,57 @@ class _Welcome3State extends State<Welcome3> {
                                                     ),
                                                     child: Column(
                                                       children: [
-                                                         Padding(
+                                                        Padding(
                                                           padding:
                                                               const EdgeInsets
                                                                   .all(8.0),
                                                           child: Container(
-                                                          height: 50,
-                                                          width: 130,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromRGBO(
-                                                                    6,
-                                                                    1,
-                                                                    1,
-                                                                    0.722),
-                                                            border: Border.all(
+                                                            height: 50,
+                                                            width: 130,
+                                                            decoration:
+                                                                BoxDecoration(
                                                               color: Color
-                                                                  .fromARGB(
-                                                                      2,
-                                                                      255,
-                                                                      204,
-                                                                      1),
-                                                            ),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        45),
-                                                          ),
-                                                          child: Center(
-                                                            child: Text(
-                                                              "Chat Groups",
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .center,
-                                                              style: TextStyle(
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                                fontSize: 15,
+                                                                  .fromRGBO(
+                                                                      6,
+                                                                      1,
+                                                                      1,
+                                                                      0.722),
+                                                              border:
+                                                                  Border.all(
                                                                 color: Color
                                                                     .fromARGB(
+                                                                        2,
                                                                         255,
-                                                                        254,
-                                                                        253,
-                                                                        253),
+                                                                        204,
+                                                                        1),
+                                                              ),
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          45),
+                                                            ),
+                                                            child: Center(
+                                                              child: Text(
+                                                                "Chat Groups",
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .center,
+                                                                style:
+                                                                    TextStyle(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  fontSize: 15,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          254,
+                                                                          253,
+                                                                          253),
+                                                                ),
                                                               ),
                                                             ),
                                                           ),
-                                                        ),
                                                         ),
                                                         Lottie.asset(
                                                           "assets/images/chat.json",
@@ -761,50 +764,52 @@ class _Welcome3State extends State<Welcome3> {
                                                               const EdgeInsets
                                                                   .all(8.0),
                                                           child: Container(
-                                                          height: 50,
-                                                          width: 130,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromRGBO(
-                                                                    6,
-                                                                    1,
-                                                                    1,
-                                                                    0.722),
-                                                            border: Border.all(
+                                                            height: 50,
+                                                            width: 130,
+                                                            decoration:
+                                                                BoxDecoration(
                                                               color: Color
-                                                                  .fromARGB(
-                                                                      2,
-                                                                      255,
-                                                                      204,
-                                                                      1),
-                                                            ),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        45),
-                                                          ),
-                                                          child: Center(
-                                                            child: Text(
-                                                              "Diet Plan",
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .center,
-                                                              style: TextStyle(
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                                fontSize: 15,
+                                                                  .fromRGBO(
+                                                                      6,
+                                                                      1,
+                                                                      1,
+                                                                      0.722),
+                                                              border:
+                                                                  Border.all(
                                                                 color: Color
                                                                     .fromARGB(
+                                                                        2,
                                                                         255,
-                                                                        254,
-                                                                        253,
-                                                                        253),
+                                                                        204,
+                                                                        1),
+                                                              ),
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          45),
+                                                            ),
+                                                            child: Center(
+                                                              child: Text(
+                                                                "Diet Plan",
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .center,
+                                                                style:
+                                                                    TextStyle(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  fontSize: 15,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          254,
+                                                                          253,
+                                                                          253),
+                                                                ),
                                                               ),
                                                             ),
                                                           ),
-                                                        ),
                                                         ),
                                                         Lottie.asset(
                                                           "assets/images/diet.json",
@@ -828,10 +833,13 @@ class _Welcome3State extends State<Welcome3> {
                                                         ),
                                                       ],
                                                     ),
-                                                  ))
+                                                  )),
                                             ],
                                           ),
-                                        )
+                                        ),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
                                       ],
                                     )),
                               ]),
