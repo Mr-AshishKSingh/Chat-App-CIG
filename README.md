@@ -1,9 +1,9 @@
 <h1>  LOGIN PAGE </h1> 
-<img src="https://github.com/Mr-AshishKSingh/Health_app/assets/110713754/3e045a55-3cdb-4c57-9b97-5e8f96b1114e"  width="200" height="">
+<center> <img src="https://github.com/Mr-AshishKSingh/Health_app/assets/110713754/3e045a55-3cdb-4c57-9b97-5e8f96b1114e"  width="100 " height=""> </center>
 <h1>  REGISTRATION PAGE </h1> 
-<img src=" https://github.com/Mr-AshishKSingh/Health_app/assets/110713754/818ffbf9-80f4-4574-8fd2-7313fe8705c4" width="200" height="">
+<img src=" https://github.com/Mr-AshishKSingh/Health_app/assets/110713754/818ffbf9-80f4-4574-8fd2-7313fe8705c4" width="100" height="">
 <h1>  HOME PAGE </h1>
-<img src=" https://github.com/Mr-AshishKSingh/Health_app/assets/110713754/101b5302-d2b1-4782-9fa8-db2fd8f18b76" width="200" height="">
+<img src=" https://github.com/Mr-AshishKSingh/Health_app/assets/110713754/101b5302-d2b1-4782-9fa8-db2fd8f18b76" width="100" height="">
 <h1>  DRAWER PAGE </h1>
 <img src="https://github.com/Mr-AshishKSingh/Health_app/assets/110713754/d1cbb581-ee2e-45ba-8949-fc8707c66b18" width="200" height="">
 <h1>  PROFILE PAGE </h1>
