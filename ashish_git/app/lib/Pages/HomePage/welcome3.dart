@@ -69,106 +69,125 @@ class _Welcome3State extends State<Welcome3> {
               ),
             ],
             centerTitle: true,
-            backgroundColor: Color.fromARGB(255, 72, 60, 229),
+            backgroundColor:  Colors.deepPurpleAccent,
             title: Text(
-              'WELCOME',
-              style: GoogleFonts.teko(),
+              'Welcome',
+              style: GoogleFonts.dancingScript(
+                textStyle: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 30
+              ),
             ),
-          ),
+          ),),
           drawer: Drawer(
             backgroundColor: Color.fromARGB(255, 83, 73, 228),
-            child: ListView(
-              padding: EdgeInsets.zero,
-              children: [
-                Lottie.asset(
-                  "assets/images/profilephotonew.json",
-                  width: 100,
-                  height: 300,
-                ),
-                Center(
-                  child: Text(
-                    userName,
-                    style: GoogleFonts.didactGothic(
-                      textStyle: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 20),
+            child: Container(
+
+              decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.fromARGB(255, 17, 0, 255),
+                  Color.fromARGB(255, 7, 2, 39), // Change gradient colors as needed
+                ],
+              ),
+            ),
+
+              child: ListView(
+                padding: EdgeInsets.zero,
+                children: [
+                  Lottie.asset(
+                    "assets/images/profilephotonew.json",
+                    width: 100,
+                    height: 300,
+                  ),
+                  Center(
+                    child: Text(
+                      userName,
+                      style: GoogleFonts.didactGothic(
+                        textStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 20),
+                      ),
                     ),
                   ),
-                ),
-                Center(
-                  child: Text(
-                    email,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.white),
+                  Center(
+                    child: Text(
+                      email,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
+                  const SizedBox(
+                    height: 10,
                   ),
-                  child: ElevatedButton(
-                    style: drawerprofile,
-                    child: Text('Profile'),
-                    onPressed: () {
-                      nextScreenReplace(context, const ProfilePage());
-                    },
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                    ),
+                    child: ElevatedButton(
+                      style: drawerprofile,
+                      child: Text('Profile'),
+                      onPressed: () {
+                        nextScreenReplace(context, const ProfilePage());
+                      },
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                    ),
+                    child: ElevatedButton(
+                      style: drawerprofile,
+                      child: Text('Groups'),
+                      onPressed: () {
+                        nextScreenReplace(context, const chatpage());
+                      },
+                    ),
                   ),
-                  child: ElevatedButton(
-                    style: drawerprofile,
-                    child: Text('Groups'),
-                    onPressed: () {
-                      nextScreenReplace(context, const chatpage());
-                    },
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                    ),
+                    child: ElevatedButton(
+                      style: drawerprofile,
+                      child: Text('Contact Us'),
+                      onPressed: () {
+                        nextScreenReplace(context, const chatpage());
+                      },
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                    ),
+                    child: ElevatedButton(
+                      style: drawerprofile,
+                      child: Text('About '),
+                      onPressed: () {
+                        nextScreenReplace(context, const aboutus());
+                      },
+                    ),
                   ),
-                  child: ElevatedButton(
-                    style: drawerprofile,
-                    child: Text('Contact Us'),
-                    onPressed: () {
-                      nextScreenReplace(context, const chatpage());
-                    },
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 70,
+                    ),
+                    child: ElevatedButton(
+                      style: drawerlogout,
+                      child: Text('Logout'),
+                      onPressed: () {
+                        authService.signOut().whenComplete(() {
+                          nextScreenReplace(context, const LoginPage());
+                        });
+                      },
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                  ),
-                  child: ElevatedButton(
-                    style: drawerprofile,
-                    child: Text('About '),
-                    onPressed: () {
-                      nextScreenReplace(context, const aboutus());
-                    },
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 70,
-                  ),
-                  child: ElevatedButton(
-                    style: drawerlogout,
-                    child: Text('Logout'),
-                    onPressed: () {
-                      authService.signOut().whenComplete(() {
-                        nextScreenReplace(context, const LoginPage());
-                      });
-                    },
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
 
@@ -227,17 +246,19 @@ class _Welcome3State extends State<Welcome3> {
                                                 child: Container(
                                                   width: 170,
                                                   height: 270,
-                                                  decoration: BoxDecoration(
-                                                    color: Color.fromRGBO(
-                                                        255, 53, 53, 0.722),
-                                                    border: Border.all(
-                                                      color: Color.fromARGB(
-                                                          2, 255, 204, 1),
-                                                    ),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            45),
-                                                  ),
+                                                  //radius 
+                                                  
+                                                  decoration:BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(45),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.fromARGB(255, 255, 123, 0),
+                  Color.fromARGB(255, 249, 90, 90), // Change gradient colors as needed
+                ],
+              ),
+            ),
                                                   child: Column(
                                                     children: [
                                                       Padding(
@@ -337,17 +358,17 @@ class _Welcome3State extends State<Welcome3> {
                                                 child: Container(
                                                   width: 170,
                                                   height: 270,
-                                                  decoration: BoxDecoration(
-                                                    color: Color.fromRGBO(
-                                                        245, 8, 178, 1),
-                                                    border: Border.all(
-                                                      color: Color.fromARGB(
-                                                          2, 255, 204, 1),
-                                                    ),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            45),
-                                                  ),
+                                                  decoration:BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(45),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.fromARGB(255, 247, 11, 11),
+                  Color.fromARGB(255, 128, 20, 20), // Change gradient colors as needed
+                ],
+              ),
+            ),
                                                   child: Column(
                                                     children: [
                                                       Padding(
@@ -459,16 +480,17 @@ class _Welcome3State extends State<Welcome3> {
                                                 child: Container(
                                                     width: 170,
                                                     height: 270,
-                                                    decoration: BoxDecoration(
-                                                      color: Color.fromRGBO(
-                                                          0, 225, 255, 0.928),
-                                                      border: Border.all(
-                                                          color: Color.fromARGB(
-                                                              2, 255, 204, 1)),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              45),
-                                                    ),
+                                                    decoration:BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(45),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.fromARGB(255, 0, 238, 255),
+                  Color.fromARGB(171, 60, 197, 221), // Change gradient colors as needed
+                ],
+              ),
+            ),
                                                     child: Column(
                                                       children: [
                                                         Padding(
@@ -550,16 +572,17 @@ class _Welcome3State extends State<Welcome3> {
                                               Container(
                                                   width: 170,
                                                   height: 270,
-                                                  decoration: BoxDecoration(
-                                                    color: Color.fromRGBO(
-                                                        255, 246, 81, 1),
-                                                    border: Border.all(
-                                                        color: Color.fromARGB(
-                                                            2, 255, 204, 1)),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            45),
-                                                  ),
+                                                  decoration:BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(45),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.fromARGB(255, 255, 251, 0),
+                  Color.fromARGB(188, 255, 243, 72), // Change gradient colors as needed
+                ],
+              ),
+            ),
                                                   child: Center(
                                                     child: Column(
                                                       children: [
@@ -654,17 +677,17 @@ class _Welcome3State extends State<Welcome3> {
                                                 child: Container(
                                                     width: 170,
                                                     height: 270,
-                                                    decoration: BoxDecoration(
-                                                      color: Color.fromRGBO(
-                                                          243, 7, 74, 1),
-                                                      border: Border.all(
-                                                          color: const Color
-                                                              .fromARGB(
-                                                              2, 255, 204, 1)),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              45),
-                                                    ),
+                                                    decoration:BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(45),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.fromARGB(255, 255, 0, 212),
+                  Color.fromARGB(255, 243, 64, 64), // Change gradient colors as needed
+                ],
+              ),
+            ),
                                                     child: Column(
                                                       children: [
                                                         Padding(
@@ -746,16 +769,17 @@ class _Welcome3State extends State<Welcome3> {
                                               Container(
                                                   width: 170,
                                                   height: 270,
-                                                  decoration: BoxDecoration(
-                                                    color: Color.fromRGBO(
-                                                        0, 255, 42, 1),
-                                                    border: Border.all(
-                                                        color: Color.fromARGB(
-                                                            2, 255, 204, 1)),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            45),
-                                                  ),
+                                                  decoration:BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(45),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.fromARGB(255, 136, 255, 0),
+                  Color.fromARGB(150, 10, 255, 2), // Change gradient colors as needed
+                ],
+              ),
+            ),
                                                   child: Center(
                                                     child: Column(
                                                       children: [

@@ -78,9 +78,16 @@ class _ProfilePageState extends State<ProfilePage> {
                     height: 370,
                     width: 300,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(108, 252, 252, 252),
-                      borderRadius: BorderRadius.circular(100),
-                    ),
+                      borderRadius: BorderRadius.circular(45),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.fromARGB(255, 253, 0, 169),
+                  Color.fromARGB(255, 223, 5, 5), // Change gradient colors as needed
+                ],
+              ),
+            ),
                     child: Column(
                       children: [
                         Lottie.asset(
@@ -92,9 +99,16 @@ class _ProfilePageState extends State<ProfilePage> {
                           height: 50,
                           width: 150,
                           decoration: BoxDecoration(
-                            color: Color.fromARGB(185, 248, 209, 33),
-                            borderRadius: BorderRadius.circular(100),
-                          ),
+                      borderRadius: BorderRadius.circular(45),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.fromARGB(255, 5, 1, 1),
+                  Color.fromARGB(255, 0, 0, 0), // Change gradient colors as needed
+                ],
+              ),
+            ),
                           child: Center(
                               child: Text(
                             "Basic Account ",
@@ -113,12 +127,19 @@ class _ProfilePageState extends State<ProfilePage> {
                     height: 50,
                   ),
                   Container(
-                    height: 50,
-                    width: 300,
+                     height: 50,
+                    // width: 300,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(108, 252, 252, 252),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                      // borderRadius: BorderRadius.circular(45),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.fromARGB(255, 42, 158, 77),
+                  Color.fromARGB(255, 51, 255, 0), // Change gradient colors as needed
+                ],
+              ),
+            ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -137,17 +158,26 @@ class _ProfilePageState extends State<ProfilePage> {
                               color: Colors.white,
                               fontSize: 20),
                         )),
+
+                        
                       ],
                     ),
                   ),
-                  SizedBox(height: 10),
+                  
                   Container(
-                    height: 30,
-                    width: 300,
+                    height: 50,
+                    // width: 300,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(108, 252, 252, 252),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                      // borderRadius: BorderRadius.circular(45),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.fromARGB(255, 72, 255, 0),
+                  Color.fromARGB(207, 37, 167, 37), // Change gradient colors as needed
+                ],
+              ),
+            ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
