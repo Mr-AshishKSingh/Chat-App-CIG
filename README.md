@@ -14,10 +14,10 @@
 
 |Technologies Used | Links |
 |------------------|-------|
-|Flutter Framework | https://dart.dev/ |
-|Dart Programming Language | https://flutter.dev/?gclid=CjwKCAiA1fqrBhA1EiwAMU5m_yumJ7GIPKoTuBVpxt9KTOgSwo42dPE3YfJqmI7tkGz5CAizdaqSUxoCKNYQAvD_BwE&gclsrc=aw.ds |
-|Android Studio for SDK | https://developer.android.com/studio |
-|Visual Studio as a IDE | https://code.visualstudio.com/ | 
+|Flutter Framework | [Visit](https://dart.dev/) |
+|Dart Programming Language | [Visit](https://flutter.dev/?gclid=CjwKCAiA1fqrBhA1EiwAMU5m_yumJ7GIPKoTuBVpxt9KTOgSwo42dPE3YfJqmI7tkGz5CAizdaqSUxoCKNYQAvD_BwE&gclsrc=aw.ds) |
+|Android Studio for SDK | [Visit](https://developer.android.com/studio) |
+|Visual Studio as a IDE | [Visit](https://code.visualstudio.com/) | 
 
 
 ![Alt text](1.png "Title")
