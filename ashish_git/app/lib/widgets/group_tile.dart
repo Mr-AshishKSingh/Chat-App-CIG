@@ -37,25 +37,27 @@ class _GroupTileState extends State<GroupTile> {
         margin: const EdgeInsets.symmetric(vertical: 7, horizontal: 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Color.fromARGB(166, 223, 211, 211),
+          color: Color.fromARGB(255, 89, 2, 92),
         ),
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
         child: ListTile(
           leading: CircleAvatar(
             radius: 30,
-            backgroundColor: Color.fromARGB(173, 248, 248, 248),
+            backgroundColor: Color.fromARGB(0, 237, 233, 233),
             child: Lottie.asset(
               "assets/images/chatgroup_grouptile.json",
               height: 200,
               width: 200,
             ),
           ),
-          title: Text("Group Name -  ${widget.groupName} ",
-              style: GoogleFonts.roboto(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 255, 255, 255),
-              )),
+          title: Center(
+            child: Text("Group Name -  ${widget.groupName} ",
+                style: GoogleFonts.roboto(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 255, 255, 255),
+                )),
+          ),
           subtitle: Center(
             child: Text(
               "Join the conversation as ${widget.userName}",

@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
 const textInputDecoration = InputDecoration(
-  
-  fillColor: Color.fromARGB(0, 255, 254, 254),
-  
- 
+  fillColor: Color.fromARGB(255, 231, 12, 12),
   filled: true,
-
-  
   labelStyle: TextStyle(color: Colors.black, fontWeight: FontWeight.w300),
   focusedBorder: OutlineInputBorder(
     borderSide: BorderSide(color: Color.fromARGB(0, 0, 81, 255), width: 2),
@@ -20,29 +15,13 @@ const textInputDecoration = InputDecoration(
   ),
 );
 
-
-
-
-
-
-
-
 void nextScreen(context, page) {
   Navigator.push(context, MaterialPageRoute(builder: (context) => page));
 }
 
-
 void nextScreenReplace(context, page) {
   Navigator.push(context, MaterialPageRoute(builder: (context) => page));
 }
-
-
-
-
-
-
-
-
 
 void showSnackbar(context, color, message) {
   ScaffoldMessenger.of(context).showSnackBar(

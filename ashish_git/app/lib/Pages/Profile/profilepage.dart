@@ -43,30 +43,34 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          iconTheme: IconThemeData(
+            color: const Color.fromARGB(255, 0, 0, 0),
+          ),
           elevation: 0,
           actions: [
             // ElevatedButton(onPressed: (){}, child: Text("ashish"))
             // Image.asset('assets/images/Logo.png', height: 50, width: 50,),
           ],
           centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 72, 60, 229),
+          backgroundColor: Color.fromARGB(255, 247, 247, 247),
           title: Text(
             "Profile Page",
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0)),
           ),
         ),
-        backgroundColor: Color.fromARGB(255, 72, 60, 229),
+        backgroundColor: Color.fromARGB(255, 233, 233, 235),
         body: Container(
           decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color.fromARGB(255, 72, 60, 229),
-              Color.fromARGB(255, 33, 20, 128), // Change gradient colors as needed
-            ],
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Color.fromARGB(255, 217, 217, 225),
+                Color.fromARGB(
+                    255, 229, 228, 235), // Change gradient colors as needed
+              ],
+            ),
           ),
-        ),
           child: Center(
             child: SingleChildScrollView(
               child: Column(
@@ -78,16 +82,26 @@ class _ProfilePageState extends State<ProfilePage> {
                     height: 370,
                     width: 300,
                     decoration: BoxDecoration(
+                      boxShadow: List<BoxShadow>.generate(
+                        1,
+                        (int index) {
+                          return BoxShadow(
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            blurRadius: 10.0,
+                          );
+                        },
+                      ),
                       borderRadius: BorderRadius.circular(45),
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 253, 0, 169),
-                  Color.fromARGB(255, 223, 5, 5), // Change gradient colors as needed
-                ],
-              ),
-            ),
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Color.fromARGB(255, 135, 6, 164),
+                          Color.fromARGB(255, 223, 5,
+                              5), // Change gradient colors as needed
+                        ],
+                      ),
+                    ),
                     child: Column(
                       children: [
                         Lottie.asset(
@@ -99,16 +113,17 @@ class _ProfilePageState extends State<ProfilePage> {
                           height: 50,
                           width: 150,
                           decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(45),
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 5, 1, 1),
-                  Color.fromARGB(255, 0, 0, 0), // Change gradient colors as needed
-                ],
-              ),
-            ),
+                            borderRadius: BorderRadius.circular(45),
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Color.fromARGB(255, 5, 1, 1),
+                                Color.fromARGB(255, 0, 0,
+                                    0), // Change gradient colors as needed
+                              ],
+                            ),
+                          ),
                           child: Center(
                               child: Text(
                             "Basic Account ",
@@ -124,22 +139,34 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ),
                   SizedBox(
-                    height: 50,
+                    height: 20,
                   ),
                   Container(
-                     height: 50,
-                    // width: 300,
+                    height: 50,
+                    width: 300,
                     decoration: BoxDecoration(
-                      // borderRadius: BorderRadius.circular(45),
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 42, 158, 77),
-                  Color.fromARGB(255, 51, 255, 0), // Change gradient colors as needed
-                ],
-              ),
-            ),
+                      //round corners
+
+                      borderRadius: BorderRadius.circular(45),
+                      boxShadow: List<BoxShadow>.generate(
+                        1,
+                        (int index) {
+                          return BoxShadow(
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            blurRadius: 10.0,
+                          );
+                        },
+                      ),
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Color.fromARGB(249, 23, 27, 24),
+                          Color.fromARGB(223, 26, 39,
+                              23), // Change gradient colors as needed
+                        ],
+                      ),
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -158,26 +185,39 @@ class _ProfilePageState extends State<ProfilePage> {
                               color: Colors.white,
                               fontSize: 20),
                         )),
-
-                        
                       ],
                     ),
                   ),
-                  
+                  SizedBox(
+                    height: 10,
+                  ),
                   Container(
                     height: 50,
-                    // width: 300,
+                    width: 300,
+
+                    //round corners
+
                     decoration: BoxDecoration(
-                      // borderRadius: BorderRadius.circular(45),
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 72, 255, 0),
-                  Color.fromARGB(207, 37, 167, 37), // Change gradient colors as needed
-                ],
-              ),
-            ),
+                      borderRadius: BorderRadius.circular(45),
+                      boxShadow: List<BoxShadow>.generate(
+                        1,
+                        (int index) {
+                          return BoxShadow(
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            blurRadius: 10.0,
+                          );
+                        },
+                      ),
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Color.fromARGB(255, 18, 29, 14),
+                          Color.fromARGB(207, 8, 13,
+                              8), // Change gradient colors as needed
+                        ],
+                      ),
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

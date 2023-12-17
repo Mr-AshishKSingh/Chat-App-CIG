@@ -54,7 +54,7 @@ class _SearchPageState extends State<SearchPage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color.fromARGB(226, 56, 47, 244),
+        backgroundColor: Color.fromARGB(255, 89, 2, 92),
         title: const Text(
           "Search",
           style: TextStyle(
@@ -65,7 +65,7 @@ class _SearchPageState extends State<SearchPage> {
       body: Column(
         children: [
           Container(
-            color: Color.fromARGB(226, 56, 47, 244),
+            color: Color.fromARGB(255, 89, 2, 92),
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: Row(
               children: [
@@ -164,10 +164,10 @@ class _SearchPageState extends State<SearchPage> {
       contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       leading: CircleAvatar(
         radius: 30,
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Color.fromARGB(209, 237, 233, 233),
         child: Text(
           groupName.substring(0, 1).toUpperCase(),
-          style: const TextStyle(color: Colors.white),
+          style: const TextStyle(color: Color.fromARGB(255, 135, 29, 29)),
         ),
       ),
       title:
@@ -201,7 +201,7 @@ class _SearchPageState extends State<SearchPage> {
             ? Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.black,
+                  color: Color.fromARGB(255, 246, 3, 246),
                   border: Border.all(color: Colors.white, width: 1),
                 ),
                 padding:
@@ -214,7 +214,8 @@ class _SearchPageState extends State<SearchPage> {
             : Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Theme.of(context).primaryColor,
+                  color: Color.fromARGB(255, 21, 14, 21),
+                  border: Border.all(color: Colors.white, width: 1),
                 ),
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),

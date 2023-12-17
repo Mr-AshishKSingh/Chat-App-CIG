@@ -57,10 +57,18 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: const IconThemeData(
+          color: Color.fromARGB(255, 0, 0, 0),
+        ),
         centerTitle: true,
         elevation: 0,
-        title: Text(widget.groupName),
-        backgroundColor: Color.fromARGB(255, 83, 73, 228),
+        title: Text(widget.groupName,
+            style: GoogleFonts.roboto(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Color.fromARGB(255, 0, 0, 0),
+            )),
+        backgroundColor: Color.fromARGB(255, 224, 224, 228),
         actions: [
           IconButton(
             onPressed: () {
@@ -82,7 +90,10 @@ class _ChatPageState extends State<ChatPage> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Color(0xFF947CEC), Color(0xFF5349E4)],
+            colors: [
+              Color.fromARGB(255, 244, 244, 246),
+              Color.fromARGB(255, 254, 254, 254)
+            ],
           ),
         ),
         child: Column(
@@ -102,13 +113,16 @@ class _ChatPageState extends State<ChatPage> {
                   Expanded(
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 83, 73, 228),
+                        color: Color.fromARGB(255, 36, 35, 52),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: TextFormField(
                         controller: messageController,
                         style: const TextStyle(color: Colors.white),
                         decoration: const InputDecoration(
+                          //center the hint text
+                          contentPadding: EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 10),
                           hintText: "Send a message...",
                           alignLabelWithHint: true,
                           hintStyle: TextStyle(
@@ -131,11 +145,14 @@ class _ChatPageState extends State<ChatPage> {
                       sendMessage();
                     },
                     child: Container(
-                      height: 30,
-                      width: 30,
+                      height: 40,
+                      width: 40,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 4, 255, 58),
-                        borderRadius: BorderRadius.circular(100),
+                        color: Color.fromARGB(255, 14, 5, 18),
+                        borderRadius: BorderRadius.horizontal(
+                          left: Radius.circular(10),
+                          right: Radius.circular(10),
+                        ),
                       ),
                       child: Center(
                         child: Icon(
