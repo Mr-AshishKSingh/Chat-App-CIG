@@ -31,8 +31,10 @@
 1. Run the follwing command in Vs terminal
    ``` flutter pub get ```
 1. Redirect to Lib Folder find **main.dart** file
-2. Run without debugging 
+2. Run without debugging
 
+   
+## APP SCREENSHOTS 
 
 ![Alt text](1.png "Title")
 ![Alt text](2.png "Title")
