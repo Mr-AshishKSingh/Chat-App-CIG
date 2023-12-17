@@ -12,12 +12,20 @@
 > [!CAUTION]
 > Application is in Development Phase so use it just for testing purpose.
 
+
+
 |Technologies Used | Links |
 |------------------|-------|
 |Flutter Framework | [Visit](https://dart.dev/) |
 |Dart Programming Language | [Visit](https://flutter.dev/?gclid=CjwKCAiA1fqrBhA1EiwAMU5m_yumJ7GIPKoTuBVpxt9KTOgSwo42dPE3YfJqmI7tkGz5CAizdaqSUxoCKNYQAvD_BwE&gclsrc=aw.ds) |
 |Android Studio for SDK | [Visit](https://developer.android.com/studio) |
 |Visual Studio as a IDE | [Visit](https://code.visualstudio.com/) | 
+
+
+# How to run in your IDE 
+### Download [Android Studio]https://developer.android.com/studio and [Vscode]https://code.visualstudio.com on your system.
+### Download Flutter -> [Link](https://docs.flutter.dev/get-started/install)
+### Setup a Virtual Device from Android Studio 
 
 
 ![Alt text](1.png "Title")
