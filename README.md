@@ -12,6 +12,14 @@
 > [!CAUTION]
 > Application is in Development Phase so use it just for testing purpose.
 
+|Technologies Used |
+|------------------|
+|Flutter Framework |
+|Dart Programming Language |
+|Android Studio for SDK |
+|Visual Studio as a IDE |
+
+
 ![Alt text](1.png "Title")
 ![Alt text](2.png "Title")
 ![Alt text](3.png "Title")
