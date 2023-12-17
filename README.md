@@ -23,9 +23,9 @@
 
 
 # How to run in your IDE 
-l.Download [Android Studio]https://developer.android.com/studio and [Vscode]https://code.visualstudio.com on your system.
-l.Download Flutter -> [Link](https://docs.flutter.dev/get-started/install)
-l.Setup a Virtual Device from Android Studio 
+1. Download [Android Studio]https://developer.android.com/studio and [Vscode]https://code.visualstudio.com on your system.
+1. Download Flutter -> [Link](https://docs.flutter.dev/get-started/install)
+1. Setup a Virtual Device from Android Studio 
 
 
 ![Alt text](1.png "Title")
