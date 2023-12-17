@@ -8,11 +8,18 @@
 > [!NOTE]
 > Application is Properly Working in Android , Web Apps , Linux , Windows , Support will soon arrive for IOS .
 
+ 
+> [!CAUTION]
+> Application is in Development Phase so use it just for testing purpose.
+
 ![Alt text](1.png "Title")
 ![Alt text](2.png "Title")
 ![Alt text](3.png "Title")
 ![Alt text](4.png "Title")
 ![Alt text](5.png "Title")
+
+
+
 
 
 
