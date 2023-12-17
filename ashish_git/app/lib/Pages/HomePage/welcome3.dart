@@ -56,45 +56,49 @@ class _Welcome3State extends State<Welcome3> {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-            Color.fromARGB(255, 56, 1, 255),
+            Color.fromARGB(255, 0, 0, 0),
             Color.fromARGB(255, 210, 212, 221)
           ])),
       child: Scaffold(
           appBar: AppBar(
-            actions: [
-              Lottie.asset(
-                "assets/images/namaste.json",
-                width: 100,
-                height: 300,
-              ),
-            ],
+            iconTheme: const IconThemeData(
+              color: Color.fromARGB(255, 0, 0, 0),
+            ),
+            // actions: [
+            //   Lottie.asset(
+            //     "assets/images/namaste.json",
+            //     width: 100,
+            //     height: 300,
+            //   ),
+            // ],
             centerTitle: true,
-            backgroundColor:  Colors.deepPurpleAccent,
+            backgroundColor: Color.fromARGB(255, 252, 252, 252),
             title: Text(
-              'Welcome',
-              style: GoogleFonts.dancingScript(
+              " Welcome  $userName",
+              style: GoogleFonts.montserrat(
                 textStyle: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    fontSize: 30
+                    color: const Color.fromARGB(255, 0, 0, 0),
+                    fontSize: 15),
               ),
             ),
-          ),),
+          ),
           drawer: Drawer(
-            backgroundColor: Color.fromARGB(255, 83, 73, 228),
+            backgroundColor: Color.fromARGB(182, 167, 4, 173),
+            //add transparency
+
             child: Container(
-
               decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 17, 0, 255),
-                  Color.fromARGB(255, 7, 2, 39), // Change gradient colors as needed
-                ],
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Color.fromARGB(28, 60, 4, 227),
+                    Color.fromARGB(
+                        13, 244, 244, 246), // Change gradient colors as needed
+                  ],
+                ),
               ),
-            ),
-
               child: ListView(
                 padding: EdgeInsets.zero,
                 children: [
@@ -195,14 +199,14 @@ class _Welcome3State extends State<Welcome3> {
 
           backgroundColor: Color.fromARGB(90, 104, 97, 168),
           body: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Color.fromARGB(255, 72, 60, 229),
+                  Color.fromARGB(255, 237, 236, 244),
                   Color.fromARGB(
-                      255, 33, 20, 128), // Change gradient colors as needed
+                      255, 255, 255, 255), // Change gradient colors as needed
                 ],
               ),
             ),
@@ -236,233 +240,263 @@ class _Welcome3State extends State<Welcome3> {
                                     padding: EdgeInsets.all(3),
                                     child: Column(
                                       children: [
+                                        Center(
+                                          child: Text(
+                                            "Welcome to Healthify , ConnectHub is your new go-to application for hassle-free group communication, crafted with simplicity in mind. Powered by Flutter, our lightweight and intuitive app is designed to streamline your group conversations, with plans to introduce one-to-one chatting soon.",
+                                            style: GoogleFonts.roboto(
+                                              textStyle: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Color.fromRGBO(
+                                                      0, 0, 0, 1),
+                                                  fontSize: 20),
+                                            ),
+                                          ),
+                                        ),
                                         SingleChildScrollView(
                                           scrollDirection: Axis.horizontal,
                                           child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceEvenly,
                                             children: [
-                                              Center(
-                                                child: Container(
-                                                  width: 170,
-                                                  height: 270,
-                                                  //radius 
-                                                  
-                                                  decoration:BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(45),
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 255, 123, 0),
-                  Color.fromARGB(255, 249, 90, 90), // Change gradient colors as needed
-                ],
-              ),
-            ),
-                                                  child: Column(
-                                                    children: [
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(8.0),
-                                                        child: Container(
-                                                          height: 50,
-                                                          width: 130,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromRGBO(
-                                                                    6,
-                                                                    1,
-                                                                    1,
-                                                                    0.722),
-                                                            border: Border.all(
-                                                              color: Color
-                                                                  .fromARGB(
-                                                                      2,
-                                                                      255,
-                                                                      204,
-                                                                      1),
-                                                            ),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        45),
-                                                          ),
-                                                          child: Center(
-                                                            child: Text(
-                                                              "Search Medicine",
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .center,
-                                                              style: TextStyle(
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                                fontSize: 15,
-                                                                color: Color
-                                                                    .fromARGB(
-                                                                        255,
-                                                                        254,
-                                                                        253,
-                                                                        253),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 15,
-                                                      ),
-                                                      Lottie.asset(
-                                                        "assets/images/medicine.json",
-                                                        width: 100,
-                                                        height: 100,
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 15,
-                                                      ),
-                                                      ElevatedButton(
-                                                        style:
-                                                            ClickHere_SearchMedicine,
-                                                        child: Text(
-                                                          'Click Here ',
-                                                          style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontSize: 15,
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    254,
-                                                                    253,
-                                                                    253),
-                                                          ),
-                                                        ),
-                                                        onPressed: () {
-                                                          Navigator.push(
-                                                            context,
-                                                            MaterialPageRoute(
-                                                              builder: (context) =>
-                                                                  searchmeds(),
-                                                            ),
-                                                          );
-                                                        },
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
+                                              // Center(
+                                              //   child: Container(
+                                              //     width: 170,
+                                              //     height: 270,
+                                              //     //radius
+
+                                              //     decoration: BoxDecoration(
+                                              //       borderRadius:
+                                              //           BorderRadius.circular(
+                                              //               45),
+                                              //       gradient: LinearGradient(
+                                              //         begin:
+                                              //             Alignment.topCenter,
+                                              //         end: Alignment
+                                              //             .bottomCenter,
+                                              //         colors: [
+                                              //           Color.fromARGB(
+                                              //               255, 255, 123, 0),
+                                              //           Color.fromARGB(
+                                              //               255,
+                                              //               249,
+                                              //               90,
+                                              //               90), // Change gradient colors as needed
+                                              //         ],
+                                              //       ),
+                                              //     ),
+                                              //     child: Column(
+                                              //       children: [
+                                              //         Padding(
+                                              //           padding:
+                                              //               const EdgeInsets
+                                              //                   .all(8.0),
+                                              //           child: Container(
+                                              //             height: 50,
+                                              //             width: 130,
+                                              //             decoration:
+                                              //                 BoxDecoration(
+                                              //               color:
+                                              //                   Color.fromRGBO(
+                                              //                       6,
+                                              //                       1,
+                                              //                       1,
+                                              //                       0.722),
+                                              //               border: Border.all(
+                                              //                 color: Color
+                                              //                     .fromARGB(
+                                              //                         2,
+                                              //                         255,
+                                              //                         204,
+                                              //                         1),
+                                              //               ),
+                                              //               borderRadius:
+                                              //                   BorderRadius
+                                              //                       .circular(
+                                              //                           45),
+                                              //             ),
+                                              //             child: Center(
+                                              //               child: Text(
+                                              //                 "Search Medicine",
+                                              //                 textAlign:
+                                              //                     TextAlign
+                                              //                         .center,
+                                              //                 style: TextStyle(
+                                              //                   fontWeight:
+                                              //                       FontWeight
+                                              //                           .bold,
+                                              //                   fontSize: 15,
+                                              //                   color: Color
+                                              //                       .fromARGB(
+                                              //                           255,
+                                              //                           254,
+                                              //                           253,
+                                              //                           253),
+                                              //                 ),
+                                              //               ),
+                                              //             ),
+                                              //           ),
+                                              //         ),
+                                              //         const SizedBox(
+                                              //           height: 15,
+                                              //         ),
+                                              //         Lottie.asset(
+                                              //           "assets/images/medicine.json",
+                                              //           width: 100,
+                                              //           height: 100,
+                                              //         ),
+                                              //         const SizedBox(
+                                              //           height: 15,
+                                              //         ),
+                                              //         ElevatedButton(
+                                              //           style:
+                                              //               ClickHere_SearchMedicine,
+                                              //           child: Text(
+                                              //             'Click Here ',
+                                              //             style: TextStyle(
+                                              //               fontWeight:
+                                              //                   FontWeight.bold,
+                                              //               fontSize: 15,
+                                              //               color:
+                                              //                   Color.fromARGB(
+                                              //                       255,
+                                              //                       254,
+                                              //                       253,
+                                              //                       253),
+                                              //             ),
+                                              //           ),
+                                              //           onPressed: () {
+                                              //             Navigator.push(
+                                              //               context,
+                                              //               MaterialPageRoute(
+                                              //                 builder: (context) =>
+                                              //                     searchmeds(),
+                                              //               ),
+                                              //             );
+                                              //           },
+                                              //         ),
+                                              //       ],
+                                              //     ),
+                                              //   ),
+                                              // ),
                                               SizedBox(width: 10),
-                                              Center(
-                                                child: Container(
-                                                  width: 170,
-                                                  height: 270,
-                                                  decoration:BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(45),
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 247, 11, 11),
-                  Color.fromARGB(255, 128, 20, 20), // Change gradient colors as needed
-                ],
-              ),
-            ),
-                                                  child: Column(
-                                                    children: [
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(8.0),
-                                                        child: Container(
-                                                          height: 50,
-                                                          width: 130,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromRGBO(
-                                                                    6,
-                                                                    1,
-                                                                    1,
-                                                                    0.722),
-                                                            border: Border.all(
-                                                              color: Color
-                                                                  .fromARGB(
-                                                                      2,
-                                                                      255,
-                                                                      204,
-                                                                      1),
-                                                            ),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        45),
-                                                          ),
-                                                          child: Center(
-                                                            child: Text(
-                                                              "Find Doctor",
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .center,
-                                                              style: TextStyle(
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                                fontSize: 15,
-                                                                color: Color
-                                                                    .fromARGB(
-                                                                        255,
-                                                                        254,
-                                                                        253,
-                                                                        253),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 15,
-                                                      ),
-                                                      Lottie.asset(
-                                                        "assets/images/findyourdoctor.json",
-                                                        width: 150,
-                                                        height: 100,
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 15,
-                                                      ),
-                                                      ElevatedButton(
-                                                        style:
-                                                            ClickHere_FindDoctor,
-                                                        child: Text(
-                                                          'Click Here ',
-                                                          style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontSize: 15,
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    254,
-                                                                    253,
-                                                                    253),
-                                                          ),
-                                                        ),
-                                                        onPressed: () {
-                                                          Navigator.push(
-                                                            context,
-                                                            MaterialPageRoute(
-                                                              builder: (context) =>
-                                                                  FindDoctor(),
-                                                            ),
-                                                          );
-                                                        },
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
+                                              // Center(
+                                              //   child: Container(
+                                              //     width: 170,
+                                              //     height: 270,
+                                              //     decoration: BoxDecoration(
+                                              //       borderRadius:
+                                              //           BorderRadius.circular(
+                                              //               45),
+                                              //       gradient: LinearGradient(
+                                              //         begin:
+                                              //             Alignment.topCenter,
+                                              //         end: Alignment
+                                              //             .bottomCenter,
+                                              //         colors: [
+                                              //           Color.fromARGB(
+                                              //               255, 247, 11, 11),
+                                              //           Color.fromARGB(
+                                              //               255,
+                                              //               128,
+                                              //               20,
+                                              //               20), // Change gradient colors as needed
+                                              //         ],
+                                              //       ),
+                                              //     ),
+                                              //     child: Column(
+                                              //       children: [
+                                              //         Padding(
+                                              //           padding:
+                                              //               const EdgeInsets
+                                              //                   .all(8.0),
+                                              //           child: Container(
+                                              //             height: 50,
+                                              //             width: 130,
+                                              //             decoration:
+                                              //                 BoxDecoration(
+                                              //               color:
+                                              //                   Color.fromRGBO(
+                                              //                       6,
+                                              //                       1,
+                                              //                       1,
+                                              //                       0.722),
+                                              //               border: Border.all(
+                                              //                 color: Color
+                                              //                     .fromARGB(
+                                              //                         2,
+                                              //                         255,
+                                              //                         204,
+                                              //                         1),
+                                              //               ),
+                                              //               borderRadius:
+                                              //                   BorderRadius
+                                              //                       .circular(
+                                              //                           45),
+                                              //             ),
+                                              //             child: Center(
+                                              //               child: Text(
+                                              //                 "Find Doctor",
+                                              //                 textAlign:
+                                              //                     TextAlign
+                                              //                         .center,
+                                              //                 style: TextStyle(
+                                              //                   fontWeight:
+                                              //                       FontWeight
+                                              //                           .bold,
+                                              //                   fontSize: 15,
+                                              //                   color: Color
+                                              //                       .fromARGB(
+                                              //                           255,
+                                              //                           254,
+                                              //                           253,
+                                              //                           253),
+                                              //                 ),
+                                              //               ),
+                                              //             ),
+                                              //           ),
+                                              //         ),
+                                              //         const SizedBox(
+                                              //           height: 15,
+                                              //         ),
+                                              //         Lottie.asset(
+                                              //           "assets/images/findyourdoctor.json",
+                                              //           width: 150,
+                                              //           height: 100,
+                                              //         ),
+                                              //         const SizedBox(
+                                              //           height: 15,
+                                              //         ),
+                                              //         ElevatedButton(
+                                              //           style:
+                                              //               ClickHere_FindDoctor,
+                                              //           child: Text(
+                                              //             'Click Here ',
+                                              //             style: TextStyle(
+                                              //               fontWeight:
+                                              //                   FontWeight.bold,
+                                              //               fontSize: 15,
+                                              //               color:
+                                              //                   Color.fromARGB(
+                                              //                       255,
+                                              //                       254,
+                                              //                       253,
+                                              //                       253),
+                                              //             ),
+                                              //           ),
+                                              //           onPressed: () {
+                                              //             Navigator.push(
+                                              //               context,
+                                              //               MaterialPageRoute(
+                                              //                 builder: (context) =>
+                                              //                     FindDoctor(),
+                                              //               ),
+                                              //             );
+                                              //           },
+                                              //         ),
+                                              //       ],
+                                              //     ),
+                                              //   ),
+                                              // ),
                                               SizedBox(width: 10),
                                             ],
                                           ),
@@ -476,191 +510,209 @@ class _Welcome3State extends State<Welcome3> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceEvenly,
                                             children: [
-                                              Center(
-                                                child: Container(
-                                                    width: 170,
-                                                    height: 270,
-                                                    decoration:BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(45),
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 0, 238, 255),
-                  Color.fromARGB(171, 60, 197, 221), // Change gradient colors as needed
-                ],
-              ),
-            ),
-                                                    child: Column(
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsets
-                                                                  .all(8.0),
-                                                          child: Container(
-                                                            height: 50,
-                                                            width: 130,
-                                                            decoration:
-                                                                BoxDecoration(
-                                                              color: Color
-                                                                  .fromRGBO(
-                                                                      6,
-                                                                      1,
-                                                                      1,
-                                                                      0.722),
-                                                              border:
-                                                                  Border.all(
-                                                                color: Color
-                                                                    .fromARGB(
-                                                                        2,
-                                                                        255,
-                                                                        204,
-                                                                        1),
-                                                              ),
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          45),
-                                                            ),
-                                                            child: Center(
-                                                              child: Text(
-                                                                "Find Hospital",
-                                                                textAlign:
-                                                                    TextAlign
-                                                                        .center,
-                                                                style:
-                                                                    TextStyle(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                  fontSize: 15,
-                                                                  color: Color
-                                                                      .fromARGB(
-                                                                          255,
-                                                                          254,
-                                                                          253,
-                                                                          253),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Lottie.asset(
-                                                          "assets/images/findhospital.json",
-                                                          width: 120,
-                                                          height: 130,
-                                                        ),
-                                                        ElevatedButton(
-                                                          style:
-                                                              ClickHere_FindHospital,
-                                                          child: Text(
-                                                              'Click Here '),
-                                                          onPressed: () {
-                                                            Navigator.push(
-                                                              context,
-                                                              MaterialPageRoute(
-                                                                  builder:
-                                                                      (context) =>
-                                                                          findhospitalpage()),
-                                                            );
-                                                          },
-                                                        ),
-                                                      ],
-                                                    )),
-                                              ),
-                                              SizedBox(width: 10),
-                                              Container(
-                                                  width: 170,
-                                                  height: 270,
-                                                  decoration:BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(45),
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 255, 251, 0),
-                  Color.fromARGB(188, 255, 243, 72), // Change gradient colors as needed
-                ],
-              ),
-            ),
-                                                  child: Center(
-                                                    child: Column(
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsets
-                                                                  .all(8.0),
-                                                          child: Container(
-                                                            height: 50,
-                                                            width: 130,
-                                                            decoration:
-                                                                BoxDecoration(
-                                                              color: Color
-                                                                  .fromRGBO(
-                                                                      6,
-                                                                      1,
-                                                                      1,
-                                                                      0.722),
-                                                              border:
-                                                                  Border.all(
-                                                                color: Color
-                                                                    .fromARGB(
-                                                                        2,
-                                                                        255,
-                                                                        204,
-                                                                        1),
-                                                              ),
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          45),
-                                                            ),
-                                                            child: Center(
-                                                              child: Text(
-                                                                "Get Funds",
-                                                                textAlign:
-                                                                    TextAlign
-                                                                        .center,
-                                                                style:
-                                                                    TextStyle(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                  fontSize: 15,
-                                                                  color: Color
-                                                                      .fromARGB(
-                                                                          255,
-                                                                          254,
-                                                                          253,
-                                                                          253),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Lottie.asset(
-                                                          "assets/images/money.json",
-                                                          width: 120,
-                                                          height: 130,
-                                                        ),
-                                                        ElevatedButton(
-                                                          style:
-                                                              ClickHere_GetFunds,
-                                                          child: Text(
-                                                              'Click Here '),
-                                                          onPressed: () {
-                                                            Navigator.push(
-                                                              context,
-                                                              MaterialPageRoute(
-                                                                  builder:
-                                                                      (context) =>
-                                                                          funds0()),
-                                                            );
-                                                          },
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ))
+                                              // Center(
+                                              //   child: Container(
+                                              //       width: 170,
+                                              //       height: 270,
+                                              //       decoration: BoxDecoration(
+                                              //         borderRadius:
+                                              //             BorderRadius.circular(
+                                              //                 45),
+                                              //         gradient: LinearGradient(
+                                              //           begin:
+                                              //               Alignment.topCenter,
+                                              //           end: Alignment
+                                              //               .bottomCenter,
+                                              //           colors: [
+                                              //             Color.fromARGB(
+                                              //                 255, 0, 238, 255),
+                                              //             Color.fromARGB(
+                                              //                 171,
+                                              //                 60,
+                                              //                 197,
+                                              //                 221), // Change gradient colors as needed
+                                              //           ],
+                                              //         ),
+                                              //       ),
+                                              //       child: Column(
+                                              //         children: [
+                                              //           Padding(
+                                              //             padding:
+                                              //                 const EdgeInsets
+                                              //                     .all(8.0),
+                                              //             child: Container(
+                                              //               height: 50,
+                                              //               width: 130,
+                                              //               decoration:
+                                              //                   BoxDecoration(
+                                              //                 color: Color
+                                              //                     .fromRGBO(
+                                              //                         6,
+                                              //                         1,
+                                              //                         1,
+                                              //                         0.722),
+                                              //                 border:
+                                              //                     Border.all(
+                                              //                   color: Color
+                                              //                       .fromARGB(
+                                              //                           2,
+                                              //                           255,
+                                              //                           204,
+                                              //                           1),
+                                              //                 ),
+                                              //                 borderRadius:
+                                              //                     BorderRadius
+                                              //                         .circular(
+                                              //                             45),
+                                              //               ),
+                                              //               child: Center(
+                                              //                 child: Text(
+                                              //                   "Find Hospital",
+                                              //                   textAlign:
+                                              //                       TextAlign
+                                              //                           .center,
+                                              //                   style:
+                                              //                       TextStyle(
+                                              //                     fontWeight:
+                                              //                         FontWeight
+                                              //                             .bold,
+                                              //                     fontSize: 15,
+                                              //                     color: Color
+                                              //                         .fromARGB(
+                                              //                             255,
+                                              //                             254,
+                                              //                             253,
+                                              //                             253),
+                                              //                   ),
+                                              //                 ),
+                                              //               ),
+                                              //             ),
+                                              //           ),
+                                              //           Lottie.asset(
+                                              //             "assets/images/findhospital.json",
+                                              //             width: 120,
+                                              //             height: 130,
+                                              //           ),
+                                              //           ElevatedButton(
+                                              //             style:
+                                              //                 ClickHere_FindHospital,
+                                              //             child: Text(
+                                              //                 'Click Here '),
+                                              //             onPressed: () {
+                                              //               Navigator.push(
+                                              //                 context,
+                                              //                 MaterialPageRoute(
+                                              //                     builder:
+                                              //                         (context) =>
+                                              //                             findhospitalpage()),
+                                              //               );
+                                              //             },
+                                              //           ),
+                                              //         ],
+                                              //       )),
+                                              // ),
+                                              // SizedBox(width: 10),
+                                              // Container(
+                                              //     width: 170,
+                                              //     height: 270,
+                                              //     decoration: BoxDecoration(
+                                              //       borderRadius:
+                                              //           BorderRadius.circular(
+                                              //               45),
+                                              //       gradient: LinearGradient(
+                                              //         begin:
+                                              //             Alignment.topCenter,
+                                              //         end: Alignment
+                                              //             .bottomCenter,
+                                              //         colors: [
+                                              //           Color.fromARGB(
+                                              //               255, 255, 251, 0),
+                                              //           Color.fromARGB(
+                                              //               188,
+                                              //               255,
+                                              //               243,
+                                              //               72), // Change gradient colors as needed
+                                              //         ],
+                                              //       ),
+                                              //     ),
+                                              //     child: Center(
+                                              //       child: Column(
+                                              //         children: [
+                                              //           Padding(
+                                              //             padding:
+                                              //                 const EdgeInsets
+                                              //                     .all(8.0),
+                                              //             child: Container(
+                                              //               height: 50,
+                                              //               width: 130,
+                                              //               decoration:
+                                              //                   BoxDecoration(
+                                              //                 color: Color
+                                              //                     .fromRGBO(
+                                              //                         6,
+                                              //                         1,
+                                              //                         1,
+                                              //                         0.722),
+                                              //                 border:
+                                              //                     Border.all(
+                                              //                   color: Color
+                                              //                       .fromARGB(
+                                              //                           2,
+                                              //                           255,
+                                              //                           204,
+                                              //                           1),
+                                              //                 ),
+                                              //                 borderRadius:
+                                              //                     BorderRadius
+                                              //                         .circular(
+                                              //                             45),
+                                              //               ),
+                                              //               child: Center(
+                                              //                 child: Text(
+                                              //                   "Get Funds",
+                                              //                   textAlign:
+                                              //                       TextAlign
+                                              //                           .center,
+                                              //                   style:
+                                              //                       TextStyle(
+                                              //                     fontWeight:
+                                              //                         FontWeight
+                                              //                             .bold,
+                                              //                     fontSize: 15,
+                                              //                     color: Color
+                                              //                         .fromARGB(
+                                              //                             255,
+                                              //                             254,
+                                              //                             253,
+                                              //                             253),
+                                              //                   ),
+                                              //                 ),
+                                              //               ),
+                                              //             ),
+                                              //           ),
+                                              //           Lottie.asset(
+                                              //             "assets/images/money.json",
+                                              //             width: 120,
+                                              //             height: 130,
+                                              //           ),
+                                              //           ElevatedButton(
+                                              //             style:
+                                              //                 ClickHere_GetFunds,
+                                              //             child: Text(
+                                              //                 'Click Here '),
+                                              //             onPressed: () {
+                                              //               Navigator.push(
+                                              //                 context,
+                                              //                 MaterialPageRoute(
+                                              //                     builder:
+                                              //                         (context) =>
+                                              //                             funds0()),
+                                              //               );
+                                              //             },
+                                              //           ),
+                                              //         ],
+                                              //       ),
+                                              //     ))
                                             ],
                                           ),
                                         ),
@@ -669,196 +721,246 @@ class _Welcome3State extends State<Welcome3> {
                                         ),
                                         SingleChildScrollView(
                                           scrollDirection: Axis.horizontal,
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
-                                            children: [
-                                              Center(
-                                                child: Container(
-                                                    width: 170,
-                                                    height: 270,
-                                                    decoration:BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(45),
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 255, 0, 212),
-                  Color.fromARGB(255, 243, 64, 64), // Change gradient colors as needed
-                ],
-              ),
-            ),
-                                                    child: Column(
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsets
-                                                                  .all(8.0),
-                                                          child: Container(
-                                                            height: 50,
-                                                            width: 130,
-                                                            decoration:
-                                                                BoxDecoration(
-                                                              color: Color
-                                                                  .fromRGBO(
-                                                                      6,
-                                                                      1,
-                                                                      1,
-                                                                      0.722),
-                                                              border:
-                                                                  Border.all(
-                                                                color: Color
-                                                                    .fromARGB(
-                                                                        2,
-                                                                        255,
-                                                                        204,
-                                                                        1),
-                                                              ),
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          45),
-                                                            ),
-                                                            child: Center(
-                                                              child: Text(
-                                                                "Chat Groups",
-                                                                textAlign:
-                                                                    TextAlign
-                                                                        .center,
-                                                                style:
+                                          child: Center(
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceEvenly,
+                                              children: [
+                                                Center(
+                                                  child: Container(
+                                                      width: 300,
+                                                      height: 300,
+                                                      decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(45),
+                                                        gradient:
+                                                            LinearGradient(
+                                                          begin: Alignment
+                                                              .topCenter,
+                                                          end: Alignment
+                                                              .bottomCenter,
+                                                          colors: [
+                                                            Color.fromARGB(255,
+                                                                255, 0, 212),
+                                                            Color.fromARGB(
+                                                                255,
+                                                                243,
+                                                                64,
+                                                                64), // Change gradient colors as needed
+                                                          ],
+                                                        ),
+                                                      ),
+                                                      child: Column(
+                                                        children: [
+                                                          SizedBox(
+                                                            height: 25,
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(8.0),
+                                                            // child: Container(
+                                                            //   height: 50,
+                                                            //   width: 200,
+                                                            //   decoration:
+                                                            //       BoxDecoration(
+                                                            //     color: Color
+                                                            //         .fromRGBO(
+                                                            //             6,
+                                                            //             1,
+                                                            //             1,
+                                                            //             0.722),
+                                                            //     border:
+                                                            //         Border.all(
+                                                            //       color: Color
+                                                            //           .fromARGB(
+                                                            //               2,
+                                                            //               255,
+                                                            //               204,
+                                                            //               1),
+                                                            //     ),
+                                                            //     borderRadius:
+                                                            //         BorderRadius
+                                                            //             .circular(
+                                                            //                 45),
+                                                            //   ),
+                                                            //   child: Center(
+                                                            //     child: Text(
+                                                            //       "Chat Groups",
+                                                            //       textAlign:
+                                                            //           TextAlign
+                                                            //               .center,
+                                                            //       style:
+                                                            //           TextStyle(
+                                                            //         fontWeight:
+                                                            //             FontWeight
+                                                            //                 .bold,
+                                                            //         fontSize:
+                                                            //             15,
+                                                            //         color: Color
+                                                            //             .fromARGB(
+                                                            //                 255,
+                                                            //                 254,
+                                                            //                 253,
+                                                            //                 253),
+                                                            //       ),
+                                                            //     ),
+                                                            //   ),
+                                                            // ),
+
+                                                            child: Text(
+                                                              "Chat Groups",
+                                                              style: GoogleFonts
+                                                                  .quicksand(
+                                                                textStyle:
                                                                     TextStyle(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                  fontSize: 15,
-                                                                  color: Color
-                                                                      .fromARGB(
-                                                                          255,
-                                                                          254,
-                                                                          253,
-                                                                          253),
-                                                                ),
+                                                                        //underline the text
+                                                                        decoration:
+                                                                            TextDecoration
+                                                                                .underline,
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .bold,
+                                                                        color: Color.fromARGB(
+                                                                            255,
+                                                                            255,
+                                                                            255,
+                                                                            255),
+                                                                        fontSize:
+                                                                            20),
                                                               ),
                                                             ),
                                                           ),
-                                                        ),
-                                                        Lottie.asset(
-                                                          "assets/images/chat.json",
-                                                          width: 120,
-                                                          height: 130,
-                                                        ),
-                                                        ElevatedButton(
-                                                          style:
-                                                              ClickHere_FindChat,
-                                                          child: Text(
-                                                              'Click Here '),
-                                                          onPressed: () {
-                                                            Navigator.push(
-                                                              context,
-                                                              MaterialPageRoute(
-                                                                  builder:
-                                                                      (context) =>
-                                                                          chatpage()),
-                                                            );
-                                                          },
-                                                        ),
-                                                      ],
-                                                    )),
-                                              ),
-                                              const SizedBox(width: 10),
-                                              Container(
-                                                  width: 170,
-                                                  height: 270,
-                                                  decoration:BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(45),
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 136, 255, 0),
-                  Color.fromARGB(150, 10, 255, 2), // Change gradient colors as needed
-                ],
-              ),
-            ),
-                                                  child: Center(
-                                                    child: Column(
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsets
-                                                                  .all(8.0),
-                                                          child: Container(
-                                                            height: 50,
-                                                            width: 130,
-                                                            decoration:
-                                                                BoxDecoration(
-                                                              color: Color
-                                                                  .fromRGBO(
-                                                                      6,
-                                                                      1,
-                                                                      1,
-                                                                      0.722),
-                                                              border:
-                                                                  Border.all(
-                                                                color: Color
-                                                                    .fromARGB(
-                                                                        2,
-                                                                        255,
-                                                                        204,
-                                                                        1),
-                                                              ),
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          45),
-                                                            ),
-                                                            child: Center(
-                                                              child: Text(
-                                                                "Diet Plan",
-                                                                textAlign:
-                                                                    TextAlign
-                                                                        .center,
-                                                                style:
-                                                                    TextStyle(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                  fontSize: 15,
-                                                                  color: Color
-                                                                      .fromARGB(
-                                                                          255,
-                                                                          254,
-                                                                          253,
-                                                                          253),
-                                                                ),
-                                                              ),
-                                                            ),
+                                                          Lottie.asset(
+                                                            "assets/images/chat.json",
+                                                            width: 120,
+                                                            height: 130,
                                                           ),
-                                                        ),
-                                                        Lottie.asset(
-                                                          "assets/images/diet.json",
-                                                          width: 120,
-                                                          height: 130,
-                                                        ),
-                                                        ElevatedButton(
-                                                          style:
-                                                              ClickHere_DietPan,
-                                                          child: Text(
-                                                              'Click Here '),
-                                                          onPressed: () {
-                                                            Navigator.push(
-                                                              context,
-                                                              MaterialPageRoute(
-                                                                  builder:
-                                                                      (context) =>
-                                                                          dietpage()),
-                                                            );
-                                                          },
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  )),
-                                            ],
+                                                          ElevatedButton(
+                                                            style:
+                                                                ClickHere_FindChat,
+                                                            child: Text(
+                                                                'Click Here '),
+                                                            onPressed: () {
+                                                              Navigator.push(
+                                                                context,
+                                                                MaterialPageRoute(
+                                                                    builder:
+                                                                        (context) =>
+                                                                            chatpage()),
+                                                              );
+                                                            },
+                                                          ),
+                                                        ],
+                                                      )),
+                                                ),
+                                                const SizedBox(width: 10),
+                                                // Container(
+                                                //     width: 170,
+                                                //     height: 270,
+                                                //     decoration: BoxDecoration(
+                                                //       borderRadius:
+                                                //           BorderRadius.circular(
+                                                //               45),
+                                                //       gradient: LinearGradient(
+                                                //         begin:
+                                                //             Alignment.topCenter,
+                                                //         end: Alignment
+                                                //             .bottomCenter,
+                                                //         colors: [
+                                                //           Color.fromARGB(
+                                                //               255, 136, 255, 0),
+                                                //           Color.fromARGB(
+                                                //               150,
+                                                //               10,
+                                                //               255,
+                                                //               2), // Change gradient colors as needed
+                                                //         ],
+                                                //       ),
+                                                //     ),
+                                                //     child: Center(
+                                                //       child: Column(
+                                                //         children: [
+                                                //           Padding(
+                                                //             padding:
+                                                //                 const EdgeInsets
+                                                //                     .all(8.0),
+                                                //             child: Container(
+                                                //               height: 50,
+                                                //               width: 130,
+                                                //               decoration:
+                                                //                   BoxDecoration(
+                                                //                 color: Color
+                                                //                     .fromRGBO(
+                                                //                         6,
+                                                //                         1,
+                                                //                         1,
+                                                //                         0.722),
+                                                //                 border:
+                                                //                     Border.all(
+                                                //                   color: Color
+                                                //                       .fromARGB(
+                                                //                           2,
+                                                //                           255,
+                                                //                           204,
+                                                //                           1),
+                                                //                 ),
+                                                //                 borderRadius:
+                                                //                     BorderRadius
+                                                //                         .circular(
+                                                //                             45),
+                                                //               ),
+                                                //               child:
+                                                //                Center(
+                                                //                 child: Text(
+                                                //                   "Diet Plan",
+                                                //                   textAlign:
+                                                //                       TextAlign
+                                                //                           .center,
+                                                //                   style:
+                                                //                       TextStyle(
+                                                //                     fontWeight:
+                                                //                         FontWeight
+                                                //                             .bold,
+                                                //                     fontSize: 15,
+                                                //                     color: Color
+                                                //                         .fromARGB(
+                                                //                             255,
+                                                //                             254,
+                                                //                             253,
+                                                //                             253),
+                                                //                   ),
+                                                //                 ),
+                                                //               ),
+                                                //             ),
+                                                //           ),
+                                                //           Lottie.asset(
+                                                //             "assets/images/diet.json",
+                                                //             width: 120,
+                                                //             height: 130,
+                                                //           ),
+                                                //           ElevatedButton(
+                                                //             style:
+                                                //                 ClickHere_DietPan,
+                                                //             child: Text(
+                                                //                 'Click Here '),
+                                                //             onPressed: () {
+                                                //               Navigator.push(
+                                                //                 context,
+                                                //                 MaterialPageRoute(
+                                                //                     builder:
+                                                //                         (context) =>
+                                                //                             dietpage()),
+                                                //               );
+                                                //             },
+                                                //           ),
+                                                //         ],
+                                                //       ),
+                                                //     )
+                                                //     ),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                         SizedBox(

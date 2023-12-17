@@ -29,47 +29,57 @@ class _MessageTileState extends State<MessageTile> {
       ),
       alignment: widget.sentByMe ? Alignment.centerRight : Alignment.centerLeft,
       child: Container(
-        
         margin: widget.sentByMe
             ? const EdgeInsets.only(left: 30)
             : const EdgeInsets.only(right: 30),
         padding: const EdgeInsets.symmetric(
-          vertical: 12,
-          horizontal: 16,
+          vertical: 10,
+          horizontal: 15,
         ),
         decoration: BoxDecoration(
+          //shadow
+          boxShadow: [
+            BoxShadow(
+              color: Color.fromARGB(255, 103, 100, 100).withOpacity(0.5),
+              spreadRadius: 0.2,
+              blurRadius: 0,
+              offset: const Offset(0, 0), // changes position of shadow
+            ),
+          ],
           borderRadius: BorderRadius.circular(20),
           color: widget.sentByMe
-              ? Color.fromARGB(255, 83, 73, 228)
-              : Color.fromARGB(255, 147, 140, 236),
+              ? Color.fromARGB(97, 242, 1, 250)
+              : Color.fromARGB(168, 237, 235, 235),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            
-
-           Image.asset(
+            Image.asset(
               'assets/images/userpfp.png',
               height: 20,
               width: 20,
-           ),
-
-            const SizedBox(height: 4),
-            
+            ),
+            const SizedBox(width: 8),
             Text(
               widget.sender.toUpperCase(),
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: Color.fromARGB(255, 3, 2, 4),
               ),
             ),
             const SizedBox(height: 4),
+
+            const SizedBox(height: 4),
+
+            // start of the message
+            //from risght to left
+
             Text(
               widget.message,
               style: TextStyle(
                 fontSize: 16,
-                color: Colors.white,
+                color: const Color.fromARGB(255, 0, 0, 0),
               ),
             ),
           ],

@@ -126,6 +126,7 @@ class chatpageState extends State<chatpage> {
       ),
       backgroundColor: Color.fromARGB(255, 231, 226, 255),
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.black),
         actions: [
           IconButton(
             onPressed: () {
@@ -135,11 +136,20 @@ class chatpageState extends State<chatpage> {
           ),
         ],
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 72, 60, 229),
-        title: Text('Chat Groups'),
+        backgroundColor: Color.fromARGB(255, 245, 245, 248),
+        title: Text('Joined Groups',
+            style: GoogleFonts.firaSans(
+              textStyle: TextStyle(
+                color: Color.fromARGB(255, 0, 0, 0),
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            )),
       ),
       drawer: Drawer(
-        backgroundColor: Color.fromARGB(255, 83, 73, 228),
+        //CHANGE DRAWER  ICON COLOR
+
+        backgroundColor: Color.fromARGB(182, 167, 4, 173),
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -254,13 +264,13 @@ class chatpageState extends State<chatpage> {
             return AlertDialog(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)),
-              backgroundColor: Color.fromARGB(255, 85, 74, 240),
+              backgroundColor: Color.fromARGB(255, 236, 220, 237),
               title: Text(
                 "Create a group",
                 textAlign: TextAlign.left,
                 style: GoogleFonts.firaSans(
                   textStyle: TextStyle(
-                    color: Color.fromARGB(255, 255, 255, 255),
+                    color: Color.fromARGB(255, 0, 0, 0),
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -278,7 +288,7 @@ class chatpageState extends State<chatpage> {
                         : Lottie.asset("assets/images/dialog.json"),
                     Container(
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(209, 236, 236, 240),
+                          color: Color.fromARGB(209, 137, 134, 137),
                           borderRadius: BorderRadius.circular(20)),
                       child: TextField(
                         onChanged: (val) {
@@ -353,9 +363,9 @@ class chatpageState extends State<chatpage> {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Color.fromARGB(255, 72, 60, 229),
-                      Color.fromARGB(
-                          255, 33, 20, 128), // Change gradient colors as needed
+                      Color.fromARGB(255, 243, 243, 243),
+                      Color.fromARGB(255, 255, 254,
+                          254), // Change gradient colors as needed
                     ],
                   ),
                 ),
