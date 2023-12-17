@@ -1,4 +1,4 @@
-<center > ![Alt text](7.png "Title") </center>
+ <center> ![Alt text](7.png "Title") </center>
 
 ![Alt text](1.png "Title")
 ![Alt text](2.png "Title")
